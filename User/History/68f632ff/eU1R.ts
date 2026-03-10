@@ -1,1 +1,0 @@
-// usePdfGenerator composable logic will be added here
