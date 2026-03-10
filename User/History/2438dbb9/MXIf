@@ -1,0 +1,182 @@
+# Vue 3 Project Rules for Cursor
+
+## 🎯 Project Overview
+This is a Vue 3.5+ enterprise application with TypeScript, using modern development practices and a plugin-based architecture.
+
+## 🏗️ Architecture Principles
+
+### Plugin-First Architecture
+- **ALL external libraries, services, and integrations MUST be placed in `src/plugins/`**
+- This includes: API services, HTTP clients, third-party integrations, UI libraries, etc.
+- Each plugin should export a Vue plugin with `install` method
+- Use dependency injection with `app.provide()` and `app.config.globalProperties`
+
+### Directory Structure
+```
+src/
+├── plugins/           # 🚨 ALL external libraries go here
+├── components/        # Vue components
+│   ├── common/        # Reusable base components
+│   ├── forms/         # Form components
+│   ├── modals/        # Modal components
+│   └── layout/        # Layout components
+├── composables/       # Reusable reactive logic
+├── stores/           # Pinia state management
+├── utils/            # Pure utility functions
+├── types/            # TypeScript definitions
+├── constants/        # Application constants
+├── locales/          # i18n translations
+└── views/            # Page components
+```
+
+## 💻 Coding Standards
+
+### Vue Components
+- **Always use `<script setup>` syntax**
+- Use Composition API consistently
+- Follow Vue 3 best practices
+- Implement proper error handling
+- Use semantic HTML elements
+- Follow accessibility guidelines (WCAG 2.1)
+
+### TypeScript
+- Use strict TypeScript mode
+- Prefer interfaces over type aliases for complex objects
+- Use typed objects for complex state management
+- Leverage discriminated unions for complex scenarios
+
+### Function Naming
+- Use descriptive names
+- Event functions: `handleClick`, `handleKeyDown`, `handleSubmit`
+- Use consts instead of functions: `const toggle = () =>`
+- Use early returns for better readability
+
+### Error Handling
+- **Always raise errors explicitly, never silently ignore**
+- Use specific error types with clear messages
+- Log errors with context before raising
+
+## 🔌 Plugin Development Rules
+
+### Creating New Plugins
+1. Create file in `src/plugins/`
+2. Export Vue plugin with `install` method
+3. Use dependency injection
+4. Add to global properties if needed
+
+### Example Plugin Structure:
+```typescript
+import type { App } from 'vue'
+
+export default {
+  install: (app: App) => {
+    // Plugin logic here
+    app.provide('serviceName', serviceInstance)
+    app.config.globalProperties.$serviceName = serviceInstance
+  }
+}
+```
+
+## 📁 File Naming Conventions
+- Components: `UserProfile.vue` (PascalCase)
+- Pages/Views: `HomePage.vue` (PascalCase)
+- Composables: `useAuth.ts` (camelCase with `use` prefix)
+- Utils: `formatDate.ts` (camelCase)
+- Types: `User.ts` (PascalCase)
+- Constants: `API_ENDPOINTS.ts` (SCREAMING_SNAKE_CASE)
+
+## 🎨 Styling Guidelines
+- Use SCSS for styling
+- Follow BEM methodology
+- Use CSS custom properties for theming
+- Implement responsive design
+- Ensure accessibility compliance
+
+## 🔒 Security & Performance
+- Validate all user inputs
+- Sanitize user-generated content
+- Use lazy loading for routes
+- Optimize component rendering
+- Monitor bundle size
+
+## 🧪 Testing
+- Write unit tests for components
+- Test composables and utilities
+- Use Vitest for testing framework
+
+## 🚨 IMPORTANT REMINDERS
+1. **ALL external libraries MUST go in `src/plugins/`**
+2. **Always use `<script setup>` syntax**
+3. **Raise errors explicitly, never silently ignore**
+4. **Use early returns for better readability**
+5. **Follow accessibility guidelines**
+
+## 📝 Code Examples
+
+### Component Structure:
+```vue
+<template>
+  <div class="component-name">
+    <!-- Template content -->
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+
+// Props
+interface Props {
+  title: string
+  disabled?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  disabled: false
+})
+
+// Emits
+interface Emits {
+  (e: 'update', value: string): void
+}
+
+const emit = defineEmits<Emits>()
+
+// Reactive data
+const isLoading = ref(false)
+
+// Computed
+const isDisabled = computed(() => props.disabled || isLoading.value)
+
+// Methods
+const handleClick = (): void => {
+  if (isDisabled.value) return
+  emit('update', 'new value')
+}
+</script>
+
+<style scoped lang="scss">
+.component-name {
+  // Styles here
+}
+</style>
+```
+
+### Plugin Structure:
+```typescript
+import type { App } from 'vue'
+
+class MyService {
+  // Service implementation
+}
+
+export const myService = new MyService()
+
+export default {
+  install: (app: App) => {
+    app.provide('myService', myService)
+    app.config.globalProperties.$myService = myService
+  }
+}
+```
+
+Remember: **ALL external libraries and services MUST be placed in `src/plugins/` directory!** 

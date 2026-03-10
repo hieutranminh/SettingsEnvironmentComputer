@@ -1,0 +1,64 @@
+.report-menu-page {
+  .page-title {
+    margin: 0 0px 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $gray-dark;
+    padding-bottom: 10px;
+    h3 {
+      display: inline-block;
+      margin-top: 10px;
+      padding-left: 0;
+      font-weight: 900;
+      font-size: 18px;
+    }
+  }
+  .report-menu-wrapper {
+    padding: 20px;
+    background: $white;
+    .report-type {
+      .report-type-title {
+        border-bottom: 3px solid $blue-dark;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $blue-dark;
+      }
+      .report-type-items {
+        ul {
+          li {
+            border: 1px solid $gray;
+            transition: 0.3s;
+            &:hover {
+              border-color: $blue-dark;
+            }
+            a {
+              display: block;
+              width: 100%;
+              padding: 10px;
+              transition: 0.3s;
+              &:hover {
+                background: $blue-dark;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.report-menu-wrapper-analysis {
+  .icon-chart-analysis {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .report-menu-page {
+    .report-type {
+      margin-bottom: 20px;
+    }
+  }
+}

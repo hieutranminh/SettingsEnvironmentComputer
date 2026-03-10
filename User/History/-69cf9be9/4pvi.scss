@@ -1,0 +1,21 @@
+.modal-aha-ai {
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .modal-aha-ai-top {
+    display: flex;
+    .modal-aha-ai-top__title {
+      display: flex;
+      align-items: center;
+    }
+    .setting-icon {
+      margin-left: auto;
+      width: 20px;
+      height: 20px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.user-command-history {
+  .multiselect {
+    width: 100% !important;
+  }
+  .multiselect.multi-checkbox {
+    .multiselect__placeholder {
+      display: inline !important;
+    }
+    .multiselect__tags span.selected {
+      font-size: 13px;
+    }
+  }
+}

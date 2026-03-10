@@ -1,0 +1,16 @@
+.calendar-search-client {
+  margin-right: 15px;
+  margin-left: 10px;
+}
+.calendar-search-client.calendar-search-client--mobile {
+  position: absolute;
+  ::v-deep .search-client-top {
+    align-items: flex-start;
+  }
+  ::v-deep .search-client--mobile {
+    flex-wrap: wrap;
+    .a-checkbox {
+      margin-left: 0 !important;
+    }
+  }
+}

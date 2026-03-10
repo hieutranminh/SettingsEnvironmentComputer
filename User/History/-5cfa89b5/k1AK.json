@@ -1,0 +1,1172 @@
+{
+  "general_example": {
+    "title_app-title": "아하플러스 본사",
+    "label_language": "언어",
+    "subtitle_welcome": "애플리케이션에 오신 것을 환영합니다",
+    "title_i18n-demo": "i18n 데모 - 번역 테스트",
+    "title_available-routes": "사용 가능한 라우트:"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "message_error": "오류가 발생했습니다",
+    "message_success": "성공",
+    "success": "성공",
+    "error": "오류",
+    "button_cancel": "취소",
+    "button_save": "저장",
+    "button_delete": "삭제",
+    "button_edit": "수정",
+    "button_add": "추가",
+    "button_search": "검색",
+    "button_filter": "필터",
+    "button_sort": "정렬",
+    "button_refresh": "새로고침",
+    "button_back": "뒤로",
+    "button_next": "다음",
+    "button_previous": "이전",
+    "close": "닫기",
+    "confirm": "확인",
+    "yes": "예",
+    "no": "아니오",
+    "example_test": "내 이름은 {name}이고 {age} <b class='text-green-500'>살입니다</b>",
+    "days": "일",
+    "month": "월",
+    "hours": "시간",
+    "minutes": "분",
+    "mins": "분",
+    "validate_messages": {
+      "require": "<span style='color: red;'>{field}</span> 입력해 주세요.",
+      "maxLength": "{field} 문자는 {max_value} 자와 같거나 더 짧아야합니다."
+    },
+    "unknown-error": "알 수 없는 오류가 발생했습니다"
+  },
+  "auth": {
+    "title_login": "로그인",
+    "title_headquarter_login": "본사 로그인",
+    "button_logout": "로그아웃",
+    "link_register": "회원가입",
+    "label_email": "이메일",
+    "label_id": "아이디",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "link_forgotPassword": "비밀번호 찾기",
+    "link_forgotId": "아이디 찾기",
+    "link_resetPassword": "비밀번호 재설정",
+    "label_rememberMe": "로그인 상태 유지",
+    "label_rememberID": "아이디 기억하기",
+    "loginSuccess": "로그인 성공",
+    "message_loginError": "로그인 실패",
+    "message_logoutSuccess": "로그아웃 성공",
+    "logging-in": "로그인 중...",
+    "placeholder_enterID": "아이디를 입력하세요",
+    "placeholder_enterPassword": "비밀번호를 입력하세요",
+    "label_country": "국가"
+  },
+  "navigation": {
+    "link_home": "홈",
+    "link_dashboard": "대시보드",
+    "link_users": "사용자",
+    "link_settings": "설정",
+    "link_profile": "프로필",
+    "link_help": "도움말",
+    "link_about": "정보"
+  },
+  "validation": {
+    "message_required": "필수 항목입니다",
+    "message_email": "유효한 이메일을 입력하세요",
+    "message_minLength": "최소 {length}자 이상 입력하세요",
+    "message_maxLength": "최대 {length}자까지 입력 가능합니다",
+    "message_passwordMatch": "비밀번호가 일치하지 않습니다",
+    "message_invalidFormat": "잘못된 형식입니다",
+    "min-value": "최소값은 {min}입니다",
+    "max-value": "최대값은 {max}입니다",
+    "max-length": "최대 {max}자까지 입력 가능합니다",
+    "must-be-number": "숫자여야 합니다",
+    "invalid-price": "올바른 가격 형식을 입력해주세요",
+    "invalid-number": "올바른 숫자 형식을 입력해주세요",
+    "invalid-time-format": "올바른 시간 형식을 입력해주세요 (HH:MM)",
+    "service-name-must-be-unique": "서비스 이름은 고유해야 합니다",
+    "prepaid-service-name-must-be-unique": "티켓 이름은 고유해야 합니다",
+    "price-consistency": "판매 가격은 서비스당 수익보다 크거나 같아야 합니다",
+    "package-must-have-items": "패키지는 최소 하나의 항목이 있어야 합니다",
+    "salary": "0 ~ 100 % 또는 0 ~ 11 자리 숫자 여야합니다",
+    "validity-by-month": "유효성은 120 개월을 초과 할 수 없습니다",
+    "validity-by-day": "유효성은 3650 일을 초과 할 수 없습니다",
+    "salary-smaller-price": "값은 가격보다 작거나 같아야합니다",
+    "salary-smaller-sales-price": "값은 판매 가격보다 작거나 같아야합니다"
+  },
+  "countries": {
+    "vietnam": "베트남",
+    "korea": "한국",
+    "japan": "일본",
+    "china": "중국"
+  },
+  "general": {
+    "alert": "알림",
+    "copyright": "(주)아하소프트 경기도 안양시 동안구 시민대로 383, 디지털엠파이어B동 907-1호<br>TEL. 1544-4634 사업자등록번호 138-81-29562 대표 장기동 통신판매업 신고번호 제2005-경기안양 431호.",
+    "error-loading-data": "데이터 로딩 중 오류가 발생했습니다",
+    "registered-date": "등록일",
+    "type": "유형",
+    "search": "검색",
+    "content": "내용",
+    "ahasoft": "아하소프트",
+    "goto": "이동",
+    "no-data-for-table": "내역이 없습니다",
+    "no-data-for-chart": "차트에 대한 데이터가 없습니다",
+    "registration-date": "등록일",
+    "edit": "수정",
+    "delete": "삭제",
+    "cancel": "취소",
+    "add": "게시글 등록",
+    "delete-confirm": "정말 삭제 하시겠습니까?",
+    "error": "오류",
+    "loading": "로딩중...",
+    "all": "전체",
+    "page": "페이지",
+    "of": "의",
+    "all-result": "총 <b>{total_records}</b> 건",
+    "label-date": "일별",
+    "label-month": "월별",
+    "label-date-range": "기간",
+    "button-search": "검색",
+    "button-print": "인쇄",
+    "button-back": "뒤로 가기",
+    "totals": "합계",
+    "total": "합계",
+    "more": "더 보기",
+    "print-preview": "인쇄 미리보기",
+    "number": "번호",
+    "date": "날짜",
+    "amount": "Amount",
+    "balance": "Balance",
+    "all-select": "전체",
+    "go-to-login": "로그인 페이지로 이동",
+    "average": "평균",
+    "empty-selection": "빈 선택",
+    "validate-date-range-exceed-one-month": "기간은 1개월을 초과할 수 없습니다.",
+    "validate-date-range-exceed-one-year": "날짜 범위 는 1 년을 초과 할 수 없습니다",
+    "validate-date-range-not-before-from-date": "종료일은 시작일 보다 이후 이어야 합니다.",
+    "no-limit": "제한 없음",
+    "select": "선택",
+    "generating-print-preview": "인쇄 미리보기 생성 중...",
+    "label-chart-line": "선",
+    "label-chart-bar": "막대",
+    "label-chart-bar-line": "막대선",
+    "label-chart-pie": "파이",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "aria-label-date-type-date": "날짜 타입 선택: 날짜",
+    "aria-label-date-type-month": "날짜 타입 선택: 월",
+    "aria-label-date-type-range": "날짜 타입 선택: 기간",
+    "label-no-input": "선택 안함",
+    "active": "사용",
+    "inactive": "미사용",
+    "status": "상태",
+    "close": "닫기",
+    "chain-manamgement": "체인점관리",
+    "validate-prepaid-goods-types": "회원권 유형을 하나 이상 선택하세요.",
+    "aria-label-previous-day": "이전 날짜",
+    "aria-label-next-day": "다음 날짜",
+    "aria-label-previous-month": "이전 월",
+    "aria-label-next-month": "다음 월",
+    "not-selected": "선택 안 함",
+    "show-error-details": "오류 상세 보기",
+    "hide-error-details": "오류 상세 숨기기",
+    "error-values": "오류 값"
+  },
+
+  "netmoney-histories": {
+    "type": "구분",
+    "items": "내역",
+    "amount": "금액",
+    "balance": "잔액",
+    "saving": "충전",
+    "deduction": "이용",
+    "manual": "수동충전",
+    "admin-sales": "매출충전",
+    "base-fee": "기본료로 이용",
+    "text-send": "문자이용",
+    "text-refund": "문자이용환급"
+  },
+
+  "home": {
+    "system-notice": "아하소프트 공지",
+    "system-qna": "시스템 문의",
+    "headquarter-notice": "본사 공지",
+    "branch-board": "지점 게시판",
+    "chain-board": "지점 게시판",
+    "must-read": "필독",
+    "no-items": "사용 가능한 항목이 없습니다",
+    "not-in-use": "사용 안함",
+    "hq-notice-alert": "본사 공지를 사용하고 있지 않습니다. 사용을 원하시면 아하소프트로 문의 주시기 바랍니다.",
+    "branch-board-alert": "지점 게시판을 사용하고 있지 않습니다. 사용을 원하시면 아하소프트로 문의 주시기 바랍니다."
+  },
+
+  "boards": {
+    "no-data": "데이터가 없습니다",
+    "all": "총 {total} 건",
+    "notice": "공지",
+    "board": "게시판",
+    "KR-SYSNOTICE": "아하소프트 공지",
+    "KR-SYSBOARD": "시스템 문의",
+    "KR-CHNNOTICE": "본사 공지",
+    "KR-CHNBOARD": "지점 게시판",
+    "VN-SYSNOTICE": "아하소프트 공지",
+    "VN-SYSBOARD": "시스템 문의",
+    "VN-CHNNOTICE": "본사 공지",
+    "VN-CHNBOARD": "지점 게시판",
+    "add": "게시글 등록",
+    "id": "번호",
+    "title": "제목",
+    "writer": "작성자",
+    "attached-files": "첨부파일",
+    "read-count": "조회수",
+    "user-role": "권한",
+    "master-only-post": "원장전용글",
+    "must-read": "필독",
+    "select-options": "선택옵션",
+    "post-on-top": "상단 고정",
+    "post-date": "게시일",
+    "file-info": "※ 최대 10MB / 이미지 1MB, 문서 3MB 이내의 파일만 첨부할 수 있습니다.",
+    "file-name": "파일이름",
+    "file-size": "파일크기",
+    "reply": "답변",
+    "delete-file": "Delete Field",
+    "type": "유형",
+    "upload-error-file-count": "첨부파일은 총 3개만 가능합니다.",
+    "upload-error-extension": "gif,png,jpeg,jpg,pdf,zip,xls,xlsx,docx,txt,csv 확장자만 업로드 가능합니다.",
+    "upload-error-image-size": "이미지 파일은 1MB 이하만 가능합니다.",
+    "upload-error-document-size": "문서 파일은 3MB 이하만 가능합니다.",
+    "error": {
+      "start-end-date": "종료일은 시작일 보다 이후 이어야 합니다."
+    }
+  },
+
+  "user-roles": {
+    "admin-master": "관리자",
+    "master": "마스터",
+    "staff": "직원 등급",
+    "manager": "매니저 등급",
+    "loading": "로딩중...",
+    "all": "전체",
+    "page": "페이지",
+    "of": "의",
+    "all-result": "총 <b>{total_records}</b> 건",
+    "label-date": "일별",
+    "label-month": "월별",
+    "label-date-range": "기간",
+    "button-search": "검색",
+    "button-print": "인쇄",
+    "no-data-for-table": "내역이 없습니다",
+    "totals": "합계",
+    "total": "합계",
+    "more": "더 보기",
+    "goto": "이동",
+    "print-preview": "인쇄 미리보기"
+  },
+
+  "login-history": {
+    "title": "로그인 내역",
+    "date-time": "날짜",
+    "id": "아이디",
+    "ip": "아이피",
+    "all": "총 {total} 건"
+  },
+
+  "login": {
+    "title": "본사 로그인",
+    "placeholder_id": "아이디를 입력하세요",
+    "placeholder_password": "비밀번호를 입력하세요",
+    "remember_id": "아이디 기억하기",
+    "button_login": "로그인",
+    "forgot_id": "아이디 찾기",
+    "forgot_password": "비밀번호 찾기",
+    "label_country": "국가"
+  },
+  "validation_form": {
+    "title": "Zod를 사용한 고급 검증 폼",
+    "zod_section_title": "수동 Zod 검증",
+    "vee_zod_section_title": "VeeValidate + Zod 통합",
+    "username_label": "사용자명 *",
+    "email_label": "이메일 *",
+    "password_label": "비밀번호 *",
+    "age_label": "나이",
+    "website_label": "웹사이트",
+    "username_placeholder": "사용자명을 입력하세요",
+    "email_placeholder": "이메일 주소를 입력하세요",
+    "password_placeholder": "비밀번호를 입력하세요",
+    "age_placeholder": "나이를 입력하세요",
+    "website_placeholder": "웹사이트 URL을 입력하세요",
+    "submit_button": "폼 제출",
+    "success_message": "폼이 성공적으로 제출되었습니다:",
+    "vee_success_message": "VeeValidate + Zod 폼이 성공적으로 제출되었습니다:",
+    "errors": {
+      "username_required": "사용자명은 필수입니다",
+      "username_min_length": "사용자명은 최소 3자 이상이어야 합니다",
+      "username_max_length": "사용자명은 20자를 초과할 수 없습니다",
+      "email_required": "이메일은 필수입니다",
+      "email_invalid": "유효한 이메일 주소를 입력하세요",
+      "password_required": "비밀번호는 필수입니다",
+      "password_min_length": "비밀번호는 최소 6자 이상이어야 합니다",
+      "password_complexity": "비밀번호는 최소 1개의 대문자, 1개의 소문자, 1개의 숫자를 포함해야 합니다",
+      "age_min": "나이는 최소 18세 이상이어야 합니다",
+      "age_max": "나이는 100세를 초과할 수 없습니다",
+      "website_invalid": "유효한 URL을 입력하세요"
+    },
+    "end-date-can-not-before-start-date": "<span>종료일</span>은 <span>시작일</span> 보다 이후 이어야 합니다."
+  },
+  "validation_messages": {
+    "fullname": {
+      "required": "전체 이름이 필요합니다",
+      "min_length": "전체 이름은 최소 {min}자 이상이어야 합니다",
+      "max_length": "전체 이름은 {max}자를 초과할 수 없습니다"
+    },
+    "email": {
+      "required": "이메일이 필요합니다",
+      "invalid": "유효한 이메일 주소를 입력하세요"
+    },
+    "confirm_password": {
+      "required": "비밀번호를 확인해주세요",
+      "not_match": "비밀번호가 일치하지 않습니다"
+    },
+    "phone": {
+      "required": "전화번호가 필요합니다",
+      "invalid": "유효한 전화번호를 입력하세요"
+    },
+    "shop_name": {
+      "required": "매장명이 필요합니다",
+      "min_length": "매장명은 최소 {min}자 이상이어야 합니다",
+      "max_length": "매장명은 {max}자를 초과할 수 없습니다"
+    },
+    "phone_number": {
+      "required": "전화번호가 필요합니다",
+      "invalid": "유효한 전화번호를 입력하세요"
+    },
+    "postcode": {
+      "required": "우편번호가 필요합니다",
+      "invalid": "유효한 우편번호를 입력하세요"
+    },
+    "address1": {
+      "required": "주소가 필요합니다",
+      "min_length": "주소는 최소 {min}자 이상이어야 합니다",
+      "max_length": "주소는 {max}자를 초과할 수 없습니다"
+    },
+    "address2": {
+      "max_length": "주소는 {max}자를 초과할 수 없습니다"
+    },
+    "owner_name": {
+      "required": "대표자명이 필요합니다",
+      "min_length": "대표자명은 최소 {min}자 이상이어야 합니다",
+      "max_length": "대표자명은 {max}자를 초과할 수 없습니다"
+    },
+    "owner_mobile_number": {
+      "required": "대표자 휴대폰번호가 필요합니다",
+      "invalid": "유효한 휴대폰번호를 입력하세요"
+    },
+    "manager_name": {
+      "required": "담당자명이 필요합니다",
+      "min_length": "담당자명은 최소 {min}자 이상이어야 합니다",
+      "max_length": "담당자명은 {max}자를 초과할 수 없습니다"
+    },
+    "manager_title": {
+      "max_length": "담당자 직함은 {max}자를 초과할 수 없습니다"
+    },
+    "mobile_number": {
+      "required": "휴대폰번호가 필요합니다",
+      "invalid": "유효한 휴대폰번호를 입력하세요"
+    },
+    "issue_status": {
+      "required": "발급여부가 필요합니다",
+      "invalid": "유효하지 않은 발급여부입니다"
+    },
+    "business_number": {
+      "required": "는 필수입니다",
+      "invalid": "는 사업자번호 형식입니다."
+    },
+    "sub_business_number": {
+      "invalid": "는 종사업자번호 형식입니다."
+    },
+    "tax_shop_name": {
+      "required": "는 필수입니다",
+      "min_length": "는 최소 {min}자 이상이어야 합니다",
+      "max_length": "는 {max}자를 초과할 수 없습니다"
+    },
+    "tax_owner_name": {
+      "required": "는 필수입니다",
+      "min_length": "는 최소 {min}자 이상이어야 합니다",
+      "max_length": "는 {max}자를 초과할 수 없습니다"
+    },
+    "tax_postcode": {
+      "required": "는 필수입니다",
+      "invalid": "는 우편번호 형식입니다."
+    },
+    "tax_address1": {
+      "required": "는 필수입니다",
+      "min_length": "는 최소 {min}자 이상이어야 합니다",
+      "max_length": "는 {max}자를 초과할 수 없습니다"
+    },
+    "tax_address2": {
+      "max_length": "세금계산서 주소는 {max}자를 초과할 수 없습니다"
+    },
+    "business_type": {
+      "required": "는 필수입니다",
+      "min_length": "는 최소 {min}자 이상이어야 합니다",
+      "max_length": "는 {max}자를 초과할 수 없습니다"
+    },
+    "business_item": {
+      "required": "는 필수입니다",
+      "min_length": "는 최소 {min}자 이상이어야 합니다",
+      "max_length": "는 {max}자를 초과할 수 없습니다"
+    },
+    "email_to_be_issued": {
+      "required": "는 필수입니다",
+      "invalid": "는 이메일 형식입니다."
+    },
+    "tax_manager_name": {
+      "max_length": "세금계산서 담당자명은 {max}자를 초과할 수 없습니다"
+    },
+    "manager_phone": {
+      "invalid": "는 전화번호 형식입니다."
+    },
+    "manager_mobile": {
+      "invalid": "는 휴대폰번호 형식입니다."
+    },
+    "field_label_with_required": "<span class=\"required-field-label\">{fieldName}</span> {error}",
+    "required": "{field} 입력해 주세요.",
+    "password": "{field} 값이 유효하지 않습니다<br> 비밀번호는 <br> - 8자 이상 20자 이하 여야 합니다.  <br> - 8자 또는 9자일 경우 숫자, 영문, 특수문자가 포함되어야 합니다. <br> - 10자 이상일 경우 숫자, 영문이 포함되어야 합니다.<br><br>",
+    "password-match": "{field} 항목과 비밀번호 확인 항목은 일치해야 합니다"
+  },
+  "vee_validate_example": {
+    "titles": {
+      "main_title": "유효성 검사 폼 예제",
+      "manual_validation": "수동 Zod 검증",
+      "vee_validate_integration": "VeeValidate + Zod 통합"
+    },
+    "form_labels": {
+      "fullname": "전체 이름",
+      "email": "이메일",
+      "password": "비밀번호",
+      "confirm_password": "비밀번호 확인",
+      "phone": "전화번호",
+      "username": "사용자명",
+      "age": "나이",
+      "website": "웹사이트"
+    },
+    "placeholders": {
+      "enter_fullname": "전체 이름을 입력하세요",
+      "enter_email": "이메일을 입력하세요",
+      "enter_password": "비밀번호를 입력하세요",
+      "confirm_password": "비밀번호를 확인하세요",
+      "enter_phone": "전화번호를 입력하세요",
+      "enter_username": "사용자명을 입력하세요",
+      "enter_age": "나이를 입력하세요",
+      "enter_website": "웹사이트 URL을 입력하세요"
+    },
+    "buttons": {
+      "validate_manual": "검증 (수동)",
+      "validate_vee": "검증 (VeeValidate)",
+      "submit": "제출"
+    },
+    "error_section": {
+      "title": "다음 오류를 수정해주세요:"
+    },
+    "success_messages": {
+      "manual_validation": "수동 검증 성공! ✅",
+      "vee_validation": "VeeValidate 검증 성공! ✅"
+    },
+    "validation_errors": {
+      "form_invalid": "아래 오류를 수정해주세요",
+      "validation_failed": "검증 실패",
+      "required_field": "이 필드는 필수입니다",
+      "invalid_email": "유효한 이메일을 입력하세요",
+      "invalid_password": "비밀번호가 요구사항을 충족하지 않습니다",
+      "passwords_not_match": "비밀번호가 일치하지 않습니다",
+      "invalid_age": "유효한 나이를 입력하세요",
+      "invalid_username": "사용자명이 너무 짧습니다",
+      "website_invalid": "유효한 URL을 입력하세요"
+    }
+  },
+
+  "shop-info": {
+    "subscriber-number": "가입자 번호",
+    "solution-name": "솔루션명",
+    "shop-info": "가입자 정보",
+    "basic-info": "기본 정보",
+    "edit-title": "가입자 수정",
+    "shop-name": "매장명",
+    "business-type": "비지니스 타입",
+    "owner-name": "대표자명",
+    "owner-mobile-number": "대표자 휴대폰",
+    "manager-name": "담당자명",
+    "manager-title": "담당자 부서 / 직함",
+    "mobile-number": "담당자 휴대폰",
+    "phone-number": "전화번호",
+    "email": "이메일",
+    "postcode": "주소",
+    "address": "주소",
+    "registration-date": "가입일"
+  },
+
+  "tax-invoice-info": {
+    "tab-title": "세금계산서 발급 정보",
+    "issue-status": "발급여부",
+    "business-number": "사업자번호",
+    "sub-business-number": "종사업장번호",
+    "sub-business-number-info": "해당되는 경우만 입력",
+    "shop-name": "상호",
+    "same-info": "기본정보와 동일",
+    "owner": "대표",
+    "address": "주소",
+    "postcode": "주소",
+    "same-address": "사업자주소 동일",
+    "business-type": "업태",
+    "business-item": "종목",
+    "email-to-be-issued": "발급받을 이메일",
+    "manager": "담당자",
+    "manager-phone": "담당자명 / 전화",
+    "name": "성명",
+    "phone": "전화",
+    "mobile": "휴대폰",
+    "required": "발급",
+    "not-required": "발급받지 않음",
+    "not-selected": "선택하지 않음",
+    "require_tax_invoice_request": "발급여부를 선택해주세요."
+  },
+
+  "menu": {
+    "branch-sales": "지점 매출 현황",
+    "branch-prepaid-goods": "지점 회원권 현황",
+    "sales-total-by-branch": "지점별 매출 집계",
+    "report-by-branch": "지점별 분석",
+    "branches": "지점 목록",
+    "branch-management": "지점 관리",
+    "services": "서비스",
+    "account": "내 계정",
+    "prepaid-cards": "정액권",
+    "package": "패키지",
+    "product": "제품",
+    "setup-chain-logo": "체인 로고 설정",
+    "id": "ID",
+    "setup": "설정",
+    "payment": "결제 관리",
+
+    "subscriber-information": "가입자 정보",
+    "boards": "게시판",
+    "head-notice": "본사 공지",
+    "branch-board": "지점 게시판",
+    "popup-management": "팝업 공지",
+    "board": "고객센터",
+    "system-notice": "아하소프트 공지",
+    "contact-chat": "채팅 문의",
+    "help-center-information": "고객센터 안내",
+    "netmoney-payment": "넷머니 결제",
+    "service-fee-payment": "이용료 결제",
+    "payment-history": "결제내역",
+    "netmoney-history": "넷머니내역",
+    "extension-expiry-date": "서비스 이용내역",
+    "id-management": "ID 관리",
+    "service-and-product": "서비스 및 제품",
+    "basic-setup": "기본 설정",
+    "chain-management": "체인점관리",
+    "hide-menu": "- 메뉴 숨김",
+    "show-menu": "+ 메뉴 펼침",
+    "remote-support": "원격 지원",
+    "product-category": "제품 분류",
+    "sales-status": "Sales Status",
+    "sales-trend-by-branch": "Sales Trend by Branch",
+    "sales-status-by-branch": "Sales Status by Branch"
+  },
+  "language": {
+    "english": "영어",
+    "korean": "한국어"
+  },
+  "user-accounts": {
+    "title": "사용자 계정",
+    "user-id": "사용자 ID",
+    "id-management": "ID 관리",
+    "add-title": "사용자 계정 추가",
+    "edit-title": "ID 수정",
+    "id": "아이디",
+    "user-level": "사용자 레벨",
+    "user-privilege": "사용자 레벨",
+    "staff": "직원",
+    "add-user": "사용자 추가",
+    "login-history": "로그인 기록",
+    "change": "변경",
+    "show-inactive": "비활성 표시",
+    "password": "비밀번호",
+    "edit": "수정",
+    "cannot-change-id-note": "ID는 변경하거나 삭제할 수 없습니다. (사용하지 않을 때는 비활성으로 설정).",
+    "password-security-note": "생일, 전화번호 또는 ID와 같은 개인정보와 유사한 비밀번호를 사용하지 마세요.",
+    "new-password": "새 비밀번호",
+    "confirm-password": "비밀번호 확인",
+    "password-confirmation": "비밀번호 확인",
+    "master": "마스터",
+    "admin": "관리자",
+    "create-info": "총 00개의 사용자 ID를 생성할 수 있습니다. (비활성 ID는 계산되지 않음).",
+    "info": "<p class='mb10'>※ ID는 변경하거나 삭제할 수 없습니다. (사용하지 않을 때는 비활성으로 설정).</p><p class='mb10'>※ 생일, 전화번호 또는 ID와 같은 개인정보와 유사한 비밀번호를 사용하지 마세요.</p>",
+    "language": "언어",
+    "password-info": "<p class='fz13'>※ 영문 + 숫자 + 특수문자 : 8~20자리<br><span style='padding-left:15px;'>(특수문자 없이 10~20자리)<span></p>",
+    "password-edit-title": "비밀번호 수정",
+    "password-requirement-1": "영문 + 숫자 + 특수문자 : 8~20자리",
+    "password-requirement-2": "(특수문자 없이 10~20자리)",
+    "password-required": "비밀번호를 입력해 주세요",
+    "password-invalid-format": "비밀번호는 영문, 숫자, 특수문자를 포함해야 합니다 (8-20자)",
+    "password-confirmation-mismatch": "비밀번호 확인이 일치하지 않습니다",
+    "password-updated": "비밀번호가 성공적으로 업데이트되었습니다",
+    "user-id-info": "<p class='fz13 mb10'>※ 영문 + 숫자(선택) 6~16자리</p>"
+  },
+  "goods": {
+    "common": {
+      "alert": "알림",
+      "add": "추가",
+      "edit": "수정",
+      "delete": "삭제",
+      "view": "보기",
+      "type": "종류",
+      "save": "저장",
+      "cancel": "취소",
+      "active": "사용",
+      "inactive": "비활성",
+      "show-inactives": "미사용 보기",
+      "product": "제품",
+      "service": "서비스",
+      "prepaid-service": "티켓",
+      "prepaid-card": "정액권",
+      "warning-delete": "정말 삭제 하시겠습니까?",
+      "is-required": "입력해 주세요.",
+      "no-limit": "무제한",
+      "price": "금액",
+      "category": "분류",
+      "product-code-or-name": "제품코드 / 이름 / 바코드",
+      "table-empty": "내역이 없습니다."
+    },
+    "prepaid-cards": {
+      "prepaid-cards": "정액권",
+      "prepaid-card-add": "정액권 등록",
+      "prepaid-card-edit": "정액권 수정",
+      "prepaid-card-type": "정액권유형",
+      "deposit-card": "금액 적립",
+      "discount-card": "할인 적용",
+      "prepaid-card-name": "정액권명",
+      "sales-price": "판매가",
+      "bonus": "추가 금액",
+      "initial-balance": "적립금액",
+      "validity": "유효기간",
+      "salary": "급여",
+      "salary-sales": "급여(판매)",
+      "status": "상태",
+      "earned-amount": "적립 금액",
+      "months": " 개월",
+      "days": " 일",
+      "this-title": "정액권 보유시 할인율 설정",
+      "this-guide": "이 카드를 소지 한 고객 할인",
+      "this-guide-mean": "클라이언트는 정액권 여러 개 가질 수 있습니다. 별도로 균형 조정 옵션이 '아니오'인 경우에만",
+      "this-guide-action": "위의 옵션은 설정> 환경 설정 메뉴에서 설정할 수 있습니다",
+      "discount-for-having-card": "정액권 보유시 할인율 설정",
+      "discount-for-services": "서비스 할인",
+      "discount-for-products": "제품 할인",
+      "discount-services-products-error-message": "<span>서비스할인</span> 또는 <span>제품 할인</span> 값을 입력해주세요.",
+      "warning-deposit-card-price-can-not-larger-than-charge-amount": "<span>판매가</span>는 적립 금액보다 클 수 없습니다.",
+      "warning-discount-card-can-not-have-charge-amount": "<span>할인 카드</span> 는 적립 금액을 가질 수 없습니다.",
+      "please-enter-the-actual-amount-available": "실제 사용 가능한 금액을 입력해 주세요.",
+      "earned-amount-must-be-greater-than-0": "<span style='color: #f3331f'>적립 금액</span>은 0 보다 커야 합니다.",
+      "if-the-prepaid-card-has-no-earned-amount-select-the-discount-card-option-in-the-prepaid-card-type": "* 적립 금액이 없는 정액권은 유형에서 “할인 전용”을 선택해 주세요."
+    },
+    "services": {
+      "shared": "공유",
+      "services": "서비스 설정",
+      "category": {
+        "category": "분류",
+        "service-category-name": "분류명",
+        "service-add-category": "분류 등록",
+        "service-edit-category": "분류 수정",
+        "services-category": "서비스 분류"
+      },
+      "service-add": "서비스 등록",
+      "service-edit": "서비스 수정",
+      "details": "세부정보",
+      "service-name": "서비스명",
+      "estimated-time": "소요시간",
+      "requires-processing-time": "처리 시간 필요",
+      "processing-time": "처리 시간",
+      "finishing-time": "마무리시간",
+      "salary-sales": "급여 (판매)",
+      "salary-deduction": "급여 (차감)",
+      "prepaid-services": "티켓",
+      "online-booking": "온라인 예약",
+      "enable-online-bookings": "온라인 예약 가능",
+      "online-description": "온라인 예약 표시",
+      "service-details": "서비스 설명",
+      "same-as-service-name": "서비스명과 동일",
+      "online-description-note": "* 온라인 예약 표시 : 온라인예약 사이트에서 표시되는 서비스 명칭",
+      "online-description-note2": "* 서비스 설명 : 온라인 예약 사이트에 나타나는 서비스 상세 정보",
+      "staff": "직원",
+      "every-resources-can-perform-this-service": "모든 예약 리소스가이 서비스를 수행 할 수 있습니다.",
+      "choose-resources-can-perform-this-service": "이 서비스를 수행 할 수있는 리소스 선택",
+      "prepaid-service-name": "티켓명",
+      "validity ": "유효기간",
+      "sales-price": "티켓 판매가",
+      "status": "상태",
+      "guide-title": "처리 및 마무리 시간",
+      "guide-content": "<p>처리시간</p><p style='padding-left: 150px;'>서비스를 진행하는 중간에 직원의 작업이 필요 없는 시간을 의미합니다. (예: 펌이나 염색 중 전 처리 후부터 마무리 작업 사이의 시간). <br/>이 시간 중 해당 직원은 다른 예약을 받을 수 있습니다.</p><p>마무리 시간</p><p style='padding-left: 150px;'>처리시간이 끝난 후 서비스 완료 시 까지 소요되는 시간을 의미합니다.</p><br/><p><strong><span style='color: #ff6600;'>※ 총 소요 시간 = 소요시간 + 처리시간 + 마무리 시간</span></strong></p>",
+      "canot-add-performing-resource": "PerformingResource를 작성할 수 없습니다",
+      "service-category-inactive-status-warning": "이 분류에 속하는 모든 서비스도 미사용 처리 하시겠습니까?",
+      "salary-amount-mismatch-error": "'금액'이 선택된 경우, 급여(판매)와 급여(차감)가 동일해야 합니다.",
+      "amount": "금액"
+    },
+    "prepaid-services": {
+      "prepaid-service-add": "티켓 등록",
+      "prepaid-service-edit": "티켓 수정",
+      "category": "분류",
+      "service-name": "서비스명",
+      "prepaid-service-name": "티켓명",
+      "unit-price": "단가",
+      "sales-price": "티켓 판매가",
+      "revenue-per-service": "1회당 매출",
+      "revenue-per-service-tooltip": "1회당 매출은 티켓 1회 차감시 매출집계 및 직원 급여 계산에 적용되는 금액입니다.",
+      "amount": "금액",
+      "quantity": "횟수",
+      "initial-quantity": "초기 수량",
+      "salary": "급여",
+      "salary-sales": "급여 (판매)",
+      "validity": "유효기간",
+      "enter-validity": "유효기간을 입력해주세요",
+      "status": "상태",
+      "warning-different-price": "<p>단가 * 판매 가격과 다른 수량. 저장 하시겠습니까?</p> <p>(단가는 공제 판매를 계산하는 데 사용됩니다)</ p>",
+      "recalculate": "다시 계산",
+      "times": "회",
+      "salary-sales-description": "<p>‘금액’을 선택한 경우에는 직원 매출에 관계 없이 설정된 금액이 급여로 계산됩니다.</p>"
+    },
+    "packages": {
+      "packages": "패키지",
+      "packages-add": "패키지 등록",
+      "packages-edit": "패키지 수정",
+      "packages-name": "패키지명",
+      "packages-total-amount": "금액",
+      "services": "서비스",
+      "category": "분류",
+      "products": "제품",
+      "product-code": "제품코드",
+      "product-name": "제품명",
+      "product-code-or-name": "제품코드 / 이름 / 바코드",
+      "product-code-or-name-short": "코드 / 이름 / 바코드",
+      "prepaid-cards": "정액권",
+      "prepaid-services": "티켓",
+      "status": "상태",
+      "items": "항목",
+      "total-price": "총 금액",
+      "delete": "삭제",
+      "total-items": "총 항목"
+    },
+    "package-item": {
+      "items": "항목",
+      "delete-title": "삭제",
+      "delete": "X"
+    }
+  },
+  "branch-sales": {
+    "title": "지점 매출 현황",
+    "label-branch": "지점",
+    "label-branch-type": "지점 구분",
+    "label-branch-group": "지점 그룹",
+    "label-branch-name": "지점 명",
+    "label-service": "서비스",
+    "label-product": "제품",
+    "label-revenue-total": "매출 합계",
+    "label-prepaid-goods-sales": "회원권 판매",
+    "label-sales-total": "판매 합계",
+    "label-prepaid-goods-deduction-total": "회원권 차감 합계",
+    "label-points-deduction": "포인트 차감",
+    "label-sales": "판매",
+    "label-prepaid-card-deduction": "정액권 차감",
+    "label-prepaid-service-deduction": "티켓 차감",
+    "label-total": "합계",
+    "label-prepaid-card": "정액권",
+    "label-prepaid-service": "티켓",
+    "note-1": "* 매출 합계 = 서비스 매출 합계 + 제품 매출 합계",
+    "note-2": "* 판매 합계 = 서비스 판매 + 제품 판매 + 회원권 판매",
+    "note-3": "* 판매는 환불을 포함합니다.",
+    "note-4": "* 매출 조회를 허용한 지점만 조회됩니다. (지점 로그인 후 “설정-환경설정-자료보호 관련” 에서 설정 가능)",
+    "note-5": "* 인쇄는 페이지별로 적용됩니다.",
+    "total-of-records": "총 {sumItems}개 지점 중 {items}개 표시되었습니다."
+  },
+
+  "branch-prepaid-goods": {
+    "title": "지점 회원권 현황",
+    "label-branch": "지점",
+    "label-branch-type": "지점 구분",
+    "label-branch-group": "지점 그룹",
+    "label-branch-name": "지점 명",
+    "label-prepaid-card": "정액권",
+    "label-prepaid-service": "티켓",
+    "label-records": "건수",
+    "label-balance": "잔액",
+    "label-prepaid-card-discount": "정액권 (할인 전용)",
+    "label-prepaid-service-qty": "티켓 (횟수 무제한)",
+    "label-remaining-qty": "잔여 횟수",
+    "label-total-balance": "잔액 합계",
+    "label-total": "합계",
+    "note-1": "* 티켓 잔여 금액 = 잔여 횟수 * 1회당 매출",
+    "note-2": "* 할인 전용 정액권의 잔액 = 판매 금액 x (남은 기간 / 총 사용 가능 기간)",
+    "note-3": "* 횟수 무제한 티켓의 잔여 금액 = 판매 금액 x (남은 기간 / 총 사용 가능 기간)"
+  },
+
+  "base-fees": {
+    "title": "서비스 이용내역",
+    "cost": "금액",
+    "extend-months": "개월수",
+    "period": "기간",
+    "months": "개월",
+    "days": "일",
+    "start-end": "시작일 - 만료일"
+  },
+  "payment-history": {
+    "title": "결제내역",
+    "amount": "금액",
+    "order-number": "주문번호",
+    "buyer-name": "주문자명",
+    "receipt": "영수증",
+    "print-receipt": "영수증출력",
+    "payment-method-name": "결제방법",
+    "purpose": "용도",
+    "auto-transfer-in-progress": "자동이체중"
+  },
+  "report-by-branch": {
+    "title": "지점별 분석",
+    "label-branch": "지점",
+
+    "report-sales-analysis": "영업 분석",
+    "sales-by-date": "- 일별 매출 분석",
+    "sales-by-month": "- 월별 매출 분석",
+    "service-sales": "- 서비스 매출 분석",
+    "service-sales-by-item": "- 서비스 항목별 매출",
+    "service-sales-by-month": "월별 서비스 매출 분석",
+    "service-sales-by-sales-type": "영업구분별 서비스 매출",
+    "product-sales-by-item": "- 제품별 매출 분석",
+    "product-sales-by-month": "- 월별 제품 매출 분석",
+    "sales-by-discount-category": "- 할인 유형별 매출 분석",
+    "sales-by-repeat-clients": "- 재방문 고객 매출 분석",
+    "prepaid-goods-repurchase": "- 회원권 재구매 분석",
+
+    "report-client-analysis": "고객 분석",
+    "clients-summary": "- 전체 고객 현황",
+    "clients-by-period": "- 기간별 고객 현황",
+    "clients-by-type": "- 고객 유형별 분석",
+    "new-clients-repeat": "- 신규고객 재방문 분석",
+    "new-clients-by-month": "- 월별 신규 고객",
+    "recommended-clients-by-month": "- 월별 소개 고객 분석",
+    "new-clients-by-referral-source": "- 신규고객 방문경로 분석",
+
+    "report-booking-analysis": "예약 분석",
+    "bookings-tally-details": "- 예약 상세 집계",
+    "bookings-by-date": "- 일별 예약 분석",
+    "bookings-by-month": "- 월별 예약 분석",
+    "bookings-by-resource": "- 예약 자원별 분석",
+    "bookings-by-day-of-week": "- 예약 요일별 분석",
+    "bookings-by-time": "- 예약 시간대별 분석",
+    "bookings-by-source": "- 예약 경로별 분석",
+    "bookings-ratio": "- 예약률 분석"
+  },
+
+  "sales-by-date": {
+    "title": "일별 매출 분석",
+    "prepaid-sales-counting": "매출 집계 기준",
+    "tooltip-prepaid-sales-counting": "회원권(정액권, 티켓) 매출을 판매시점에 잡을지 실제 이용시점에 잡을것인지 선택합니다.\n- 판매시점 : 서비스, 제품, 회원권 판매만 집계됩니다. (회원권 차감 제외)\n- 이용시점 : 서비스/제품의 판매 및 차감 모두 집계됩니다. (회원권 판매 제외)",
+    "label-when-sold": "판매 시점",
+    "label-when-used": "이용 시점",
+    "label-date": "날짜",
+    "label-service": "서비스",
+    "label-product": "제품",
+    "label-prepaid-card": "정액권",
+    "label-prepaid-service": "티켓",
+    "label-total": "합계",
+    "label-display-item": "표시 항목"
+  },
+  "sales-by-month": {
+    "title": "월별 매출 분석",
+    "prepaid-sales-counting": "매출 집계 기준",
+    "tooltip-prepaid-sales-counting": "회원권(정액권, 티켓) 매출을 판매시점에 잡을지 실제 이용시점에 잡을것인지 선택합니다.\n- 판매시점 : 서비스, 제품, 회원권 판매만 집계됩니다. (회원권 차감 제외)\n- 이용시점 : 서비스/제품의 판매 및 차감 모두 집계됩니다. (회원권 판매 제외)",
+    "label-when-sold": "판매 시점",
+    "label-when-used": "이용 시점",
+    "label-month": "월별",
+    "label-service": "서비스",
+    "label-product": "제품",
+    "label-prepaid-card": "정액권",
+    "label-prepaid-service": "티켓",
+    "label-total": "합계",
+    "label-display-item": "표시 항목"
+  },
+  "service-sales": {
+    "title": "서비스 매출 분석",
+
+    "label-report-by": "분석 항목",
+    "label-staff": "직원",
+    "label-category": "분류",
+    "label-service": "서비스",
+    "label-day-of-week": "요일",
+    "label-hour-of-day": "시간",
+    "label-chart": "차트",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "label-ratio": "비율(%)",
+    "note-1": "* 서비스판매(정액권 및 티켓 차감 포함)만 집계됩니다.",
+    "note-2": "* 금액과 수량에는 환불이 반영되어 집계됩니다."
+  },
+  "service-sales-by-item": {
+    "title": "서비스 항목별 매출",
+
+    "label-chart": "차트",
+    "label-staff": "직원",
+    "label-category": "분류",
+    "label-service": "서비스",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "label-ratio": "비율(%)",
+    "note-1": "* 서비스판매(정액권 및 티켓 차감 포함)만 집계됩니다.",
+    "note-2": "* 금액과 수량에는 환불이 반영되어 집계됩니다."
+  },
+  "service-sales-by-month": {
+    "title": "월별 서비스 매출 분석",
+
+    "label-chart": "차트",
+    "label-staff": "직원",
+    "label-category": "분류",
+    "label-service": "서비스",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "label-ratio": "비율(%)",
+    "note-1": "* 서비스판매(정액권 및 티켓 차감 포함)만 집계됩니다.",
+    "note-2": "* 금액과 수량에는 환불이 반영되어 집계됩니다."
+  },
+  "service-sales-by-sales-type": {
+    "title": "영업구분별 서비스 매출",
+
+    "prepaid-sales-counting": "매출 집계 기준",
+    "tooltip-prepaid-sales-counting": "회원권(정액권, 티켓) 매출을 판매시점에 잡을지 실제 이용시점에 잡을것인지 선택합니다.\n- 판매시점 : 서비스, 회원권 판매만 집계됩니다. (회원권 차감 제외)\n- 이용시점 : 서비스판매 및 차감 모두 집계됩니다. (회원권 판매 제외)",
+
+    "label-include-points-deduction": "포인트 차감 포함",
+    "label-when-sold": "판매 시점",
+    "label-when-used": "이용 시점",
+    "label-staff": "직원",
+    "label-category": "분류",
+    "label-service": "서비스",
+    "label-total": "합계",
+    "label-no-input": "선택 안함",
+
+    "note-1": "* 서비스판매(정액권 및 티켓 차감 포함)만 집계됩니다.",
+    "note-2": "* 금액과 수량에는 모두 환불이 반영되어 집계됩니다.",
+    "note-3": "* 푸른색의 숫자는 수량을 나타냅니다."
+  },
+
+  "product-sales-by-item": {
+    "title": "제품별 매출 분석",
+
+    "label-report-by": "분석 항목",
+    "label-staff": "직원",
+    "label-product": "제품",
+    "label-product-category": "제품 분류",
+    "label-chart": "차트",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "label-ratio": "비율(%)",
+    "note-1": "* 제품 판매(정액권 차감 포함)만 집계됩니다.",
+    "note-2": "* 금액과 수량에는 환불이 반영되어 집계됩니다."
+  },
+  "product-sales-by-month": {
+    "title": "월별 제품 매출 분석",
+
+    "label-product": "제품",
+    "label-product-category": "분류",
+    "label-staff": "직원",
+    "label-chart": "차트",
+    "label-month": "월",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "label-ratio": "비율(%)",
+    "note-1": "* 제품 판매(정액권 차감 포함)만 집계됩니다.",
+    "note-2": "* 금액과 수량에는 환불이 반영되어 집계됩니다."
+  },
+
+  "sales-by-discount-category": {
+    "title": "할인 유형별 매출 분석",
+    "label-staff": "직원",
+    "label-discount-category": "할인 구분",
+    "label-qty": "수량",
+    "label-discount-amount": "할인 금액",
+    "label-ratio": "비율(%)",
+    "label-no-discount-category": "할인 구분 없음",
+    "label-total": "합계"
+  },
+
+  "sales-by-repeat-clients": {
+    "title": "재방문 고객 매출 분석",
+    "label-service": "서비스",
+    "label-new": "신규",
+    "label-repeat": "재방문",
+    "label-unregistered": "미등록",
+    "label-total": "합계",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "note-1": "* 환불은 해당분석에 반영되지 않습니다."
+  },
+
+  "prepaid-goods-repurchase": {
+    "title": "선불 상품 재구매",
+    "label-service": "서비스",
+    "label-new": "신규",
+    "label-repurchase": "재구매",
+    "label-total": "합계",
+    "label-qty": "수량",
+    "label-amount": "금액",
+    "label-prepaid-card": "정액권",
+    "label-prepaid-service": "티켓",
+    "note-1": "* 환불은 해당분석에 반영되지 않습니다."
+  },
+
+  "clients-by-period": {
+    "title": "기간별 고객 현황",
+    "title-table-visiting-clients": "방문 고객",
+    "title-table-visiting-members": "방문 회원",
+    "label-counting-basis": "구분",
+    "label-registered-clients": "등록 고객",
+    "label-unregistered-clients": "미등록 고객",
+    "label-grand-total": "총 합계",
+    "label-new": "신규",
+    "label-revisit": "재방문",
+    "label-total": "합계",
+    "label-prepaid-goods-sales": "회원권 판매",
+    "label-prepaid-goods-deduction": "회원권 차감",
+    "label-first-purchase": "첫구매",
+    "label-repurchase": "재구매",
+    "label-number-of-clients": "고객 수",
+    "label-number-of-sales": "판매 수",
+    "note-1": "* 방문 고객 : 조회 기간내 판매가 있는 고객",
+    "note-2": "* 방문 회원 : 방문 고객 중 회원권(정액권, 티켓) 판매나 차감(일부 차감 포함)이 있는 고객",
+    "note-3": "* 고객 수",
+    "note-3-sub-1": "- 방문횟수에 관계 없이 고객을 기준으로 집계합니다. (예: 조회 기간내 홍길동이 2회 방문 시 고객 수는 1명)",
+    "note-3-sub-2": "- 신규 고객이 조회 기간내 재방문해도 신규 고객 수에만 포함됩니다."
+  },
+
+  "clients-by-type": {
+    "title": "고객 유형별 분석",
+    "label-sex": "성별",
+    "label-client-rating": "고객 등급",
+    "label-client-group": "고객그룹",
+    "label-total": "합계",
+    "label-number-of-clients": "고객 수",
+    "label-ratio": "비율(%)",
+    "label-report-by": "분석 항목",
+    "label-chart": "차트"
+  },
+  "clients-summary": {
+    "title": "전체 고객 현황",
+    "label-chart": "차트",
+    "label-dormant-client-criteria": "휴면 고객 기준: 미방문",
+    "label-month": "개월",
+    "label-type": "종류",
+    "label-number-of-clients": "고객 수",
+    "label-ratio": "비율",
+    "label-detail": "상세",
+    "label-note-member": "* 회원: 유효한 회원권을 보유하고 있으며 휴면 상태가 아닌 고객.",
+    "label-note-non-member": "* 비회원: 현재 유효한 회원권을 보유하고 있지 않으며 휴면 상태가 아닌 고객. (회원권 만료된 고객 포함.)",
+    "label-members": "회원",
+    "label-non-members-expired": "비회원 (회원권 만료)",
+    "label-non-members": "비회원",
+    "label-dormant-clients": "휴면 고객",
+    "label-dormant-members": "휴면 회원",
+    "label-dormant-non-members": "휴면 비회원"
+  },
+  "help-center": {
+    "contact-chat": "채팅 문의",
+    "client-support": "고객센터 전화",
+    "if-you-have-any-question-while-using-ahasoft-plus-please-callor-chat-with-our-customer": "아하소프트 플러스 이용 중 문의사항은<br>고객센터 '전화' 또는 '채팅 문의'를 이용해 주세요",
+    "help-center-hour": "고객센터 운영시간",
+    "weekdays": "평일",
+    "9am-6pm": "오전 9시 ~ 오후 6시",
+    "saturdays": "토요일",
+    "9:30am-to-3:pm-some-business-restrictions": "오전 9시 30분 ~ 오후 3시 (일부 업무 제한)",
+    "lunch-break": "점심시간",
+    "12:30-to-1:30pm": "12시 30분 ~ 1시 30분",
+    "sundays-and-holidays-leave-the-message": "일요일 및 공휴일에는 '채팅 문의'로 내용을 남겨주시면, 운영시간 내에 순차적으로 답변드리겠습니다.",
+    "chat": "채팅 문의"
+  },
+
+  "new-clients-repeat": {
+    "title": "신규고객 재방문 분석",
+    "label-as-of": "기준 시점",
+    "label-staff": "직원",
+    "label-new-client": "신규 고객",
+    "label-repeat-total": "재방문 합계",
+    "label-repeat": "재방문",
+    "label-num": "고객 수",
+    "label-total": "합계",
+    "note-1": "* 신규고객은 고객의 첫방문일을 기준으로 집계됩니다.",
+    "note-2": "* 재방문 고객 수는 첫번째 재방문한 횟수만 (1회) 포함합니다. (예를들어, 1월의 신규고객이 2월에 2회, 3월에 1회 재방문 한 경우, 2월의 재방문 수에만 1회 포함됩니다)",
+    "note-3": "* 재방문시 판매한 직원이 바뀌어도 첫 판매시 직원의 재방문 고객 수에 포함됩니다.",
+    "note-4": "* 고객의 첫 판매가 복수 직원이 함께 판매한 경우는 ‘복수직원’의 신규고객 수로 집계됩니다."
+  },
+
+  "new-clients-by-month": {
+    "title": "월별 신규 고객"
+  },
+
+  "recommended-clients-by-month": {
+    "title": "월별 소개 고객 분석"
+  },
+
+  "new-clients-by-referral-source": {
+    "title": "신규고객 방문경로 분석"
+  },
+
+  "bookings-tally-details": {
+    "title": "예약 상세 집계"
+  },
+
+  "bookings-by-date": {
+    "title": "일별 예약 분석"
+  },
+
+  "bookings-by-month": {
+    "title": "월별 예약 분석"
+  },
+
+  "bookings-by-resource": {
+    "title": "예약 자원별 분석"
+  },
+
+  "bookings-by-day-of-week": {
+    "title": "예약 요일별 분석"
+  },
+
+  "bookings-by-time": {
+    "title": "예약 시간대별 분석",
+    "label-chart": "차트",
+    "label-hour-of-day": "시간",
+    "label-number-of-bookings": "예약 건수",
+    "label-ratio": "비율 (%)"
+  },
+
+  "bookings-by-source": {
+    "title": "예약 경로별 분석"
+  },
+
+  "booking-ratio": {
+    "title": "예약률 분석",
+    "label-type": "구분",
+    "label-number-of-clients": "고객 수",
+    "label-ratio": "비율(%)",
+    "label-scheduled-clients": "예약 고객",
+    "label-unscheduled-clients": "비 예약 고객",
+    "label-total": "합계",
+    "label-note-scheduled-clients": "* 예약 고객 수 = 예약 건수(바로 방문, 예약 취소, 노쇼 제외).",
+    "label-note-unscheduled-clients": "* 비 예약 고객 수 = 총 판매 건수(취소수수료 판매 제외) – 예약 고객 수."
+  },
+
+  "sales-total-by-branch": {
+    "title": "매출 집계",
+    "sales-total": "매출 합계",
+    "sales-by-staff": "직원별 매출",
+    "sales-by-item": "항목별 매출"
+  }
+}

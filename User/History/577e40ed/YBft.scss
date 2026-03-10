@@ -1,0 +1,123 @@
+.modal-aha-ai-result-available-times {
+  .modal-dialog {
+    max-width: 700px;
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray;
+    padding: 0 15px 10px;
+    margin: 0 -15px 15px;
+    gap: 10px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      b {
+        white-space: pre-wrap;
+      }
+      p {
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: wrap;
+      }
+    }
+    .a-button {
+      flex-shrink: 0;
+      align-self: flex-start;
+    }
+  }
+
+  &-body {
+    .date {
+      margin-bottom: 10px;
+    }
+    .available-time {
+      margin-bottom: 15px;
+      p {
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        li {
+          position: relative;
+          display: inline-block;
+          padding: 10px 14px;
+          border: 1px solid $gray;
+          background-color: $white;
+          border-radius: 4px;
+          font-size: 13px;
+          text-align: center;
+          transition: all 0.2s linear;
+          cursor: pointer;
+          user-select: none;
+        }
+        li:hover {
+          border-color: $blue;
+          background-color: $blue-lighten;
+        }
+        li::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          border-radius: 50%;
+        }
+        li.is-recommended {
+          &::before {
+            background-color: $blue;
+          }
+        }
+        li.is-not-recommended {
+          &::before {
+            background-color: $red;
+          }
+        }
+      }
+    }
+    .explain {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      .explain-item {
+        position: relative;
+        p {
+          padding-left: 16px;
+        }
+        &::before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 0;
+          border-radius: 50%;
+          margin-top: 5px;
+        }
+        &--recommended {
+          &::before {
+            background-color: $blue;
+          }
+        }
+        &--not-recommended {
+          &::before {
+            background-color: $red;
+          }
+        }
+      }
+    }
+  }
+
+  &-footer {
+    .a-button {
+      .b-icon {
+        font-size: 24px;
+        margin-top: -2px;
+      }
+    }
+  }
+}

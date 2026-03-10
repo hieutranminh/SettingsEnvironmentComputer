@@ -1,0 +1,12 @@
+// Responsive visibility classes
+.mobile-visible {
+  @include mobile-visible;
+}
+
+.desktop-visible {
+  @include desktop-visible;
+}
+
+.tooltip-w-300 {
+  max-width: 300px !important;
+}

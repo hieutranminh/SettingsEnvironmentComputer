@@ -1,0 +1,335 @@
+{
+	"name": "vscode-stylelint",
+	"version": "2.0.2",
+	"license": "MIT",
+	"description": "Official Stylelint extension for Visual Studio Code",
+	"main": "dist/index.js",
+	"displayName": "Stylelint",
+	"publisher": "stylelint",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stylelint/vscode-stylelint.git"
+	},
+	"homepage": "https://github.com/stylelint/vscode-stylelint#readme",
+	"bugs": "https://github.com/stylelint/vscode-stylelint/issues",
+	"qna": "https://stackoverflow.com/questions/tagged/vscode+stylelint",
+	"sponsor": {
+		"url": "https://opencollective.com/stylelint"
+	},
+	"icon": "media/stylelint.png",
+	"engines": {
+		"vscode": ">=1.103.0"
+	},
+	"galleryBanner": {
+		"color": "#000000",
+		"theme": "dark"
+	},
+	"categories": [
+		"Linters",
+		"Snippets",
+		"Programming Languages"
+	],
+	"keywords": [
+		"css",
+		"less",
+		"sass",
+		"scss",
+		"sugarss",
+		"lint",
+		"linter",
+		"style",
+		"stylelint",
+		"validation",
+		"check"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Stylelint",
+			"properties": {
+				"stylelint.enable": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": true,
+					"description": "Control whether Stylelint is enabled or not."
+				},
+				"stylelint.logLevel": {
+					"scope": "machine",
+					"type": "string",
+					"enum": [
+						"error",
+						"warn",
+						"info",
+						"debug"
+					],
+					"default": "info",
+					"description": "Controls the log level used by the Stylelint extension and language server. Restart the extension host or the window after changing the setting, since it's picked up at initialization."
+				},
+				"stylelint.codeAction.disableRuleComment": {
+					"scope": "resource",
+					"type": "object",
+					"default": {
+						"location": "separateLine"
+					},
+					"properties": {
+						"location": {
+							"type": "string",
+							"enum": [
+								"separateLine",
+								"sameLine"
+							],
+							"default": "separateLine",
+							"description": "Configure whether disable comments are added on the same line or a new line."
+						}
+					},
+					"additionalProperties": false,
+					"description": "Options for the disable lint rule action in the quick fix menu."
+				},
+				"stylelint.config": {
+					"scope": "resource",
+					"type": [
+						"object",
+						"null"
+					],
+					"default": null,
+					"description": "A Stylelint configuration object."
+				},
+				"stylelint.configFile": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "Path to a JSON, YAML, or JS file that contains your configuration object. Use this option if you don't want Stylelint to search for a configuration file."
+				},
+				"stylelint.configBasedir": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "A path to the directory that relative paths defining \"extends\" and \"plugins\" are relative to."
+				},
+				"stylelint.customSyntax": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "An absolute path to a custom PostCSS-compatible syntax module."
+				},
+				"stylelint.reportDescriptionlessDisables": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "Report `stylelint-disable` comments without a description."
+				},
+				"stylelint.ignoreDisables": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "Ignore `stylelint-disable` (e.g. `/* stylelint-disable block-no-empty */`) comments."
+				},
+				"stylelint.reportNeedlessDisables": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "Also report errors for `stylelint-disable` comments that are not blocking a lint warning."
+				},
+				"stylelint.reportInvalidScopeDisables": {
+					"scope": "resource",
+					"type": "boolean",
+					"default": false,
+					"description": "Also report errors for `stylelint-disable` comments that used for rules that don't exist within the configuration object."
+				},
+				"stylelint.stylelintPath": {
+					"scope": "resource",
+					"type": "string",
+					"default": "",
+					"description": "Supply a custom path to the Stylelint module."
+				},
+				"stylelint.packageManager": {
+					"scope": "resource",
+					"type": "string",
+					"enum": [
+						"npm",
+						"yarn",
+						"pnpm"
+					],
+					"default": "npm",
+					"description": "The package manager you use to install node modules."
+				},
+				"stylelint.validate": {
+					"scope": "resource",
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"css",
+						"postcss"
+					],
+					"description": "An array of language ids which should be validated by Stylelint."
+				},
+				"stylelint.snippet": {
+					"scope": "resource",
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"css",
+						"postcss"
+					],
+					"description": "An array of language ids which snippets are provided by Stylelint."
+				},
+				"stylelint.rules.customizations": {
+					"scope": "resource",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"rule": {
+								"type": "string",
+								"description": "Rule name pattern to match. `*` is treated as a wildcard. Prefix with `!` to match all rules that do NOT match the pattern."
+							},
+							"severity": {
+								"type": "string",
+								"enum": [
+									"downgrade",
+									"upgrade",
+									"error",
+									"warn",
+									"info",
+									"off",
+									"default"
+								],
+								"description": "Severity override: `downgrade` converts errors to warnings and warnings to info messages, `upgrade` converts warnings to errors, `default` uses the original severity from Stylelint, or specify exact severity."
+							}
+						},
+						"required": [
+							"rule",
+							"severity"
+						],
+						"additionalProperties": false
+					},
+					"default": [],
+					"description": "Override severity levels for specific rules."
+				}
+			}
+		},
+		"commands": [
+			{
+				"title": "Fix all auto-fixable Problems",
+				"category": "Stylelint",
+				"command": "stylelint.executeAutofix"
+			},
+			{
+				"title": "Restart Stylelint Server",
+				"category": "Stylelint",
+				"command": "stylelint.restart"
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": "**/.stylelintrc*",
+				"url": "https://json.schemastore.org/stylelintrc.json"
+			}
+		],
+		"languages": [
+			{
+				"id": "ignore",
+				"filenames": [
+					".stylelintignore"
+				]
+			}
+		]
+	},
+	"dependencies": {
+		"fast-diff": "^1.3.0",
+		"path-is-inside": "^1.0.2",
+		"rfdc": "^1.4.1",
+		"semver": "^7.7.3",
+		"serialize-error": "^13.0.1",
+		"triple-beam": "^1.4.1",
+		"vscode-jsonrpc": "^8.2.1",
+		"vscode-languageclient": "^9.0.1",
+		"vscode-languageserver": "^9.0.1",
+		"vscode-languageserver-protocol": "^3.17.5",
+		"vscode-languageserver-textdocument": "^1.0.12",
+		"vscode-languageserver-types": "^3.17.5",
+		"vscode-uri": "^3.1.0",
+		"winston": "^3.19.0",
+		"winston-transport": "^4.9.0"
+	},
+	"devDependencies": {
+		"@stylelint/prettier-config": "^4.0.0",
+		"@types/node": "22.17.2",
+		"@types/path-is-inside": "^1.0.3",
+		"@types/semver": "^7.7.1",
+		"@types/triple-beam": "^1.3.5",
+		"@types/vscode": "1.103.0",
+		"@vitest/coverage-v8": "^4.0.18",
+		"@vitest/eslint-plugin": "^1.6.6",
+		"@vscode/test-cli": "^0.0.12",
+		"@vscode/test-electron": "^2.5.2",
+		"@vscode/vsce": "^3.7.1",
+		"cspell": "^9.6.4",
+		"esbuild": "^0.27.2",
+		"eslint": "^9.39.2",
+		"eslint-config-stylelint": "^26.1.0",
+		"eslint-plugin-jsdoc": "^62.5.2",
+		"execa": "^9.6.1",
+		"fast-glob": "^3.3.3",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.5.6",
+		"postcss-html": "^1.8.1",
+		"postcss-markdown": "^1.3.1",
+		"postcss-sass": "^0.5.0",
+		"postcss-scss": "^4.0.9",
+		"postcss-styled-syntax": "^0.7.1",
+		"prettier": "^3.8.1",
+		"stylelint": "^17.1.1",
+		"stylelint-processor-glamorous": "^0.3.0",
+		"stylelint-processor-styled-components": "^1.10.0",
+		"stylelint-scss": "^7.0.0",
+		"tsx": "^4.21.0",
+		"typed-emitter": "^2.1.0",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.54.0",
+		"vitest": "^4.0.18"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.src.json",
+		"build-bundle-watch": "run:p build-watch bundle-watch",
+		"build-watch": "npm run build -- --watch",
+		"bundle": "npm run bundle-base -- --sourcemap",
+		"bundle-base": "tsx scripts/bundle.ts",
+		"bundle-watch": "npm run bundle-base -- --sourcemap --watch",
+		"build-bundle": "run-s build bundle",
+		"format": "prettier . --write",
+		"lint": "run-s \"lint:*\"",
+		"lint:formatting": "prettier . --check",
+		"lint:js": "eslint --cache --concurrency=auto",
+		"lint:spelling": "cspell lint --no-progress",
+		"lint:types": "tsc -b",
+		"lint:unit-tests": "tsx scripts/enforce-unit-tests-per-file.ts",
+		"test": "npm run build-bundle && npm run vitest --",
+		"test:e2e": "node scripts/run-e2e.js",
+		"test:integration": "npm run vitest -- --project integration",
+		"test:unit": "npm run vitest -- --project unit",
+		"test:node-versions": "node scripts/test-node-versions.js",
+		"vitest": "vitest run",
+		"vscode:prepublish": "npm run build && npm run bundle-base -- --minify",
+		"vscode:launch": "node scripts/launch-vscode.js",
+		"publish": "vsce publish --no-git-tag-version --no-update-package-json",
+		"switch-stylelint": "node scripts/switch-stylelint.mjs"
+	},
+	"prettier": "@stylelint/prettier-config",
+	"volta": {
+		"node": "22.17.0",
+		"npm": "11.0.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1772032020664,
+		"targetPlatform": "universal",
+		"size": 1899040
+	}
+}

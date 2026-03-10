@@ -1,0 +1,219 @@
+.prepaid-services-wrapper {
+  &__view-table {
+    table thead th {
+      white-space: nowrap;
+    }
+    tr:not(.inactive) {
+      .prepaid-service-name,
+      .remaining-quantity {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .show-expired-pc {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 6px;
+
+    .sales-prepaid-services__checkbox {
+      // margin: auto 0 auto auto;
+
+      label.custom-control-label {
+        &::before,
+        &::after {
+          top: 3px;
+          @include max-responsive(small) {
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .show-expired-mobile {
+    //display: inline-block;
+    display: none;
+  }
+
+  .is-readonly {
+    table tbody tr td.remaining-quantity > span {
+      .quantity {
+        width: 100%;
+      }
+
+      .btn-deduct {
+        display: none;
+      }
+    }
+  }
+
+  table {
+    thead {
+      tr {
+        th {
+          &.mobile {
+            display: none;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          &.mobile {
+            display: none;
+          }
+
+          .sales-prepaid-services__checkbox {
+            label.custom-control-label {
+              &::before,
+              &::after {
+                margin-left: 0;
+              }
+            }
+          }
+
+          &.remaining-quantity {
+            & > span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .quantity {
+                width: 65px;
+                text-align: center;
+              }
+
+              .btn-deduct {
+                width: calc(100% - 65px) !important;
+                max-width: 80px;
+                margin-left: 10px;
+                padding: 3px 5px !important;
+
+                &.inactive {
+                  visibility: hidden;
+                }
+              }
+            }
+          }
+
+          .show-more-text {
+            cursor: pointer;
+          }
+
+          .shop-and-family-info__detail {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sales-prepaid-services__wrapper--mobile {
+  display: flex;
+
+  .custom-control-label {
+    margin: 0.25rem 0.125rem 0 0;
+  }
+}
+
+.sales-prepaid-services__main-container--mobile {
+  flex: 1;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+// ****responsive------------------------
+@media screen and (max-width: 1199.98px) {
+}
+
+@media screen and (max-width: 991.98px) {
+}
+
+@media screen and (max-width: 767.98px) {
+  .prepaid-services-wrapper .prepaid-services-wrapper__view-table-wrapper {
+    .vgt-responsive {
+      overflow-x: hidden;
+    }
+
+    .vgt-wrap.empty {
+      table {
+        tbody {
+          tr {
+            td {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    table {
+      thead {
+        tr {
+          th {
+            display: none;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            display: none;
+
+            &.mobile {
+              display: block;
+              position: relative;
+              height: auto;
+              text-align: left;
+
+              .show-more-text {
+                position: absolute;
+                right: 20px;
+                top: 30%;
+              }
+
+              .group-button {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                .btn {
+                  display: inline-block;
+                }
+              }
+
+              .expand {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+        tr:not(.inactive) {
+          .service-name-title {
+            font-weight: bold;
+          }
+          .row-remaining-quantity p:last-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .show-expired-mobile {
+      display: inline-block;
+    }
+
+    #dropdown-right {
+      height: 37px;
+      width: 37px;
+    }
+  }
+}

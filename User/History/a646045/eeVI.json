@@ -1,0 +1,19 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+f4",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "composerMode.background"
+    }
+]

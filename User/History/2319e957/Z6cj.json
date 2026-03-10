@@ -1,0 +1,14 @@
+{
+  "window.commandCenter": 1,
+  "cursor.cpp.disabledLanguages": ["markdown", "plaintext"],
+  "editor.formatOnSave": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "workbench.colorTheme": "Dracula Theme",
+  "git.autofetch": true,
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true,
+  "git.enableSmartCommit": true
+}

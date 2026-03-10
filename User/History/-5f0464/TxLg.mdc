@@ -1,0 +1,190 @@
+# Pinia Store Patterns
+
+This project uses Pinia for state management with composition API style stores.
+
+## Store Structure Template:
+
+```typescript
+import { ref, computed } from 'vue'
+import { defineStore } from 'pinia'
+import type { User, UserFilters } from '@/types'
+
+interface UserState {
+  users: User[]
+  loading: boolean
+  error: string | null
+  filters: UserFilters
+}
+
+export const useUserStore = defineStore('user', (): UserState & UserActions => {
+  // State
+  const users = ref<User[]>([])
+  const loading = ref(false)
+  const error = ref<string | null>(null)
+  const filters = ref<UserFilters>({
+    search: '',
+    status: 'all',
+  })
+
+  // Computed
+  const filteredUsers = computed(() => {
+    return users.value.filter((user) => {
+      const matchesSearch = user.name.toLowerCase().includes(filters.value.search.toLowerCase())
+      const matchesStatus = filters.value.status === 'all' || user.status === filters.value.status
+      return matchesSearch && matchesStatus
+    })
+  })
+
+  const userCount = computed(() => filteredUsers.value.length)
+
+  // Actions
+  const fetchUsers = async (): Promise<void> => {
+    try {
+      loading.value = true
+      error.value = null
+
+      const response = await fetch('/api/users')
+      if (!response.ok) {
+        throw new Error(`Failed to fetch users: ${response.statusText}`)
+      }
+
+      users.value = await response.json()
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : 'Unknown error occurred'
+      throw err
+    } finally {
+      loading.value = false
+    }
+  }
+
+  const addUser = async (user: Omit<User, 'id'>): Promise<User> => {
+    try {
+      loading.value = true
+      error.value = null
+
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(user),
+      })
+
+      if (!response.ok) {
+        throw new Error(`Failed to add user: ${response.statusText}`)
+      }
+
+      const newUser = await response.json()
+      users.value.push(newUser)
+      return newUser
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : 'Unknown error occurred'
+      throw err
+    } finally {
+      loading.value = false
+    }
+  }
+
+  const updateFilters = (newFilters: Partial<UserFilters>): void => {
+    filters.value = { ...filters.value, ...newFilters }
+  }
+
+  const clearError = (): void => {
+    error.value = null
+  }
+
+  return {
+    // State
+    users,
+    loading,
+    error,
+    filters,
+
+    // Computed
+    filteredUsers,
+    userCount,
+
+    // Actions
+    fetchUsers,
+    addUser,
+    updateFilters,
+    clearError,
+  }
+})
+```
+
+## Store Rules:
+
+1. **Composition API Style**: Use composition API style with `defineStore('name', () => {})`
+2. **TypeScript Interfaces**: Define state and actions interfaces
+3. **Reactive State**: Use `ref()` for all state properties
+4. **Computed Properties**: Use `computed()` for derived state
+5. **Async Actions**: Handle errors properly with try-catch blocks
+6. **Error Handling**: Store errors in state and provide clear error messages
+7. **Loading States**: Track loading state for async operations
+8. **Return Types**: Always define return types for functions
+9. **Immutability**: Don't mutate state directly, use proper methods
+10. **Single Responsibility**: Each store should manage one domain
+
+## Store Naming:
+
+- **Store Names**: Use camelCase with `use` prefix (e.g., `useUserStore`)
+- **File Names**: Use kebab-case (e.g., `user-store.ts`)
+- **State Properties**: Use descriptive names that reflect the data
+
+## State Management Patterns:
+
+1. **Normalized State**: Keep related data normalized
+2. **Derived State**: Use computed properties for filtered/sorted data
+3. **Loading States**: Track loading state per operation
+4. **Error States**: Store error messages for user feedback
+5. **Optimistic Updates**: Update UI immediately, rollback on error
+
+## Error Handling Pattern:
+
+```typescript
+const someAction = async (): Promise<void> => {
+  try {
+    loading.value = true
+    error.value = null
+
+    // Async operation
+    const result = await apiCall()
+
+    // Update state
+    data.value = result
+  } catch (err) {
+    error.value = err instanceof Error ? err.message : 'Unknown error occurred'
+    throw err // Re-throw for component handling
+  } finally {
+    loading.value = false
+  }
+}
+```
+
+## Store Composition:
+
+1. **Feature-based**: Group related stores in feature directories
+2. **Shared State**: Use composables for shared logic between stores
+3. **Store Dependencies**: Avoid circular dependencies between stores
+4. **Store Testing**: Write unit tests for store logic
+
+## Usage in Components:
+
+```vue
+<script setup lang="ts">
+import { useUserStore } from '@/stores/user'
+
+const userStore = useUserStore()
+
+// Access state
+const { users, loading, error } = storeToRefs(userStore)
+
+// Access actions
+const { fetchUsers, addUser } = userStore
+</script>
+```
+
+description:
+globs:
+alwaysApply: false
+
+---

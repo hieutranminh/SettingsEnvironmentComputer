@@ -1,0 +1,28 @@
+const CACHE_NAME = 'ahasoft-plus'
+
+self.addEventListener('install', function (event) {
+  /**
+   * @description Using an update service worker to change the file name
+   */
+  self.skipWaiting()
+
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      const offlinePage = '/offline.html'
+      cache.addAll([offlinePage])
+    }),
+  )
+})
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim())
+})
+
+self.addEventListener('fetch', function (event) {
+  if (event.request.mode === 'navigate') {
+    return event.respondWith(fetch(event.request).catch(() => {
+      const offlinePage = '/offline.html'
+      return caches.match(offlinePage)
+    }))
+  }
+})

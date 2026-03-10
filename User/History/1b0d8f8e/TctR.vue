@@ -1,0 +1,161 @@
+<template>
+  <Card>
+    <template #content>
+      <div class="filter">
+        <div class="filter-form">
+          <div class="filter-form-group">
+            <div class="filter-form-item">
+              <label for="report-by">{{ $t('clients-by-type.label-report-by') }}</label>
+
+              <Select
+                v-model="reportTypeModel"
+                :options="reportTypeOptions"
+                labelId="report-by"
+                optionLabel="name"
+                optionValue="id"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="filter-action">
+          <Button :label="$t('general.button-search')" @click="handleSearchClick" />
+        </div>
+      </div>
+    </template>
+  </Card>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+// Composables
+import { useI18n } from 'vue-i18n'
+
+// Constants
+import { REPORT_TYPE_IN_CLIENTS_BY_TYPE } from '@/constants'
+// Types
+import type { ClientsByTypeFilterInterface } from '@/types/client-report/ClientsByType'
+
+const props = defineProps<{
+  modelValue: ClientsByTypeFilterInterface
+}>()
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', value: ClientsByTypeFilterInterface): void
+  (e: 'filtersChanged'): void
+}>()
+
+const { t } = useI18n()
+
+const reportTypeModel = computed({
+  get: () => props.modelValue.reportType,
+  set: (value) => {
+    emit('update:modelValue', {
+      ...props.modelValue,
+      reportType: value,
+    })
+  },
+})
+const reportTypeOptions = computed(() => [
+  { id: REPORT_TYPE_IN_CLIENTS_BY_TYPE.SEX, name: t('clients-by-type.label-sex') },
+  { id: REPORT_TYPE_IN_CLIENTS_BY_TYPE.CLIENT_RATING, name: t('clients-by-type.label-client-rating') },
+  { id: REPORT_TYPE_IN_CLIENTS_BY_TYPE.CLIENT_GROUP, name: t('clients-by-type.label-client-group') },
+])
+
+const handleSearchClick = () => {
+  emit('filtersChanged')
+}
+</script>
+
+<style scoped lang="scss">
+.p-card {
+  margin-bottom: 1rem;
+}
+
+.filter {
+  @include flex-center;
+  flex-wrap: wrap;
+
+  @include maxResponsive(mobile) {
+    display: block;
+  }
+
+  .filter-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+
+    @include maxResponsive(mobile) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .filter-form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include maxResponsive(smallMobile) {
+      display: block;
+    }
+
+    .filter-form-item {
+      @include flex-center;
+      gap: 0.5rem;
+
+      @include maxResponsive(smallMobile) {
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      &.filter-form-radio {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .filter-form-radio-item {
+        @include flex-center;
+        gap: 0.5rem;
+      }
+
+      & > label {
+        flex-shrink: 0;
+
+        @include maxResponsive(smallMobile) {
+          margin-bottom: 0.2rem;
+          display: inline-block;
+        }
+      }
+    }
+
+    .p-inputtext,
+    .p-select,
+    .p-multiselect {
+      width: 100%;
+      min-width: 200px;
+    }
+
+    :deep(.p-multiselect) {
+      .p-multiselect-option {
+        white-space: normal;
+      }
+    }
+  }
+
+  .filter-action {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    @include maxResponsive(smallMobile) {
+      justify-content: center;
+    }
+
+    .p-button {
+      width: 120px;
+    }
+  }
+}
+</style>

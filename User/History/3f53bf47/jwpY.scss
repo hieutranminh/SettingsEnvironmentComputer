@@ -1,0 +1,19 @@
+.section-number-of-clients {
+  margin-bottom: 30px;
+
+  h3 {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .number-of-clients-content {
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.section-number-of-clients.section-number-of-clients--mobile {
+  .number-of-clients-content {
+    flex-direction: column;
+  }
+}

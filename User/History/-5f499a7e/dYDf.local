@@ -1,0 +1,27 @@
+# ============================================================
+# DEVELOPMENT ENVIRONMENT
+# ============================================================
+# Mode: development
+# Usage: pnpm dev OR pnpm build:dev
+# ============================================================
+
+# Gateway Configuration
+VITE_HEADQUARTERADMIN_GATEWAY_BASEURL=https://localhost:44001
+
+# Notification (SignalR)
+VITE_NOTIFICATION_READ_API_BASEURL=https://ahasoft-salon-solution-notification-local.service.signalr.net/client/?hub=salonheadquarter
+
+# Login URLs
+VITE_LOGIN_URL_DEFAULT=https://ahasoft-homepage-kr-dev.azurewebsites.net/login/login
+VITE_LOGIN_URL_KR=https://ahasoft-homepage-kr-dev.azurewebsites.net/login/login
+
+# Azure Storage
+VITE_AZURE_STORAGE_BOARD_URL=https://ahasoftsaloncommondev.blob.core.windows.net/boards/
+VITE_AZURE_STORAGE_CLIENT_URL=https://ahasoftsaloncommondev.blob.core.windows.net/clients/
+VITE_AZURE_STORAGE_ADMINS_URL=https://ahasoftsaloncommondev.blob.core.windows.net/admins/
+
+# Payment Integration (Dev/Test key)
+VITE_IAMPORT_KEY=imp00422231
+
+# Error Tracking (Sentry)
+VITE_HEADQUARTER_ADMIN_SENTRY_DSN=https://7e25fc5a912a45c19e900c6d0da2abdf@o1036991.ingest.sentry.io/6004676

@@ -1,0 +1,165 @@
+---
+alwaysApply: true
+---
+
+# PrimeVue LLMs Documentation Reference
+
+This project uses PrimeVue v4. When working with PrimeVue components, use the official LLM-optimized documentation.
+
+## Documentation Endpoints
+
+| Endpoint                                | Description                                       |
+| --------------------------------------- | ------------------------------------------------- |
+| https://primevue.org/llms/llms.txt      | Structured list of key documentation pages        |
+| https://primevue.org/llms/llms-full.txt | Complete list of all PrimeVue documentation pages |
+| https://primevue.org/{component}.md     | Markdown documentation for specific component     |
+
+## Component Documentation URLs
+
+When you need detailed information about a PrimeVue component, access its Markdown documentation:
+
+### Form Components
+
+- DatePicker: https://primevue.org/datepicker.md
+- AutoComplete: https://primevue.org/autocomplete.md
+- Checkbox: https://primevue.org/checkbox.md
+- InputText: https://primevue.org/inputtext.md
+- InputNumber: https://primevue.org/inputnumber.md
+- Select: https://primevue.org/select.md
+- MultiSelect: https://primevue.org/multiselect.md
+- Textarea: https://primevue.org/textarea.md
+- Password: https://primevue.org/password.md
+- RadioButton: https://primevue.org/radiobutton.md
+- ToggleSwitch: https://primevue.org/toggleswitch.md
+- Slider: https://primevue.org/slider.md
+- Rating: https://primevue.org/rating.md
+- ColorPicker: https://primevue.org/colorpicker.md
+- Listbox: https://primevue.org/listbox.md
+- TreeSelect: https://primevue.org/treeselect.md
+- CascadeSelect: https://primevue.org/cascadeselect.md
+- InputMask: https://primevue.org/inputmask.md
+- InputOtp: https://primevue.org/inputotp.md
+- Knob: https://primevue.org/knob.md
+- Editor: https://primevue.org/editor.md
+- FloatLabel: https://primevue.org/floatlabel.md
+- IftaLabel: https://primevue.org/iftalabel.md
+- IconField: https://primevue.org/iconfield.md
+- InputGroup: https://primevue.org/inputgroup.md
+- KeyFilter: https://primevue.org/keyfilter.md
+- SelectButton: https://primevue.org/selectbutton.md
+- ToggleButton: https://primevue.org/togglebutton.md
+
+### Button Components
+
+- Button: https://primevue.org/button.md
+- SpeedDial: https://primevue.org/speeddial.md
+- SplitButton: https://primevue.org/splitbutton.md
+
+### Data Components
+
+- DataTable: https://primevue.org/datatable.md
+- DataView: https://primevue.org/dataview.md
+- Paginator: https://primevue.org/paginator.md
+- Tree: https://primevue.org/tree.md
+- TreeTable: https://primevue.org/treetable.md
+- Timeline: https://primevue.org/timeline.md
+- VirtualScroller: https://primevue.org/virtualscroller.md
+- OrderList: https://primevue.org/orderlist.md
+- PickList: https://primevue.org/picklist.md
+- OrgChart: https://primevue.org/orgchart.md
+
+### Panel Components
+
+- Accordion: https://primevue.org/accordion.md
+- Card: https://primevue.org/card.md
+- Tabs: https://primevue.org/tabs.md
+- Panel: https://primevue.org/panel.md
+- Fieldset: https://primevue.org/fieldset.md
+- Divider: https://primevue.org/divider.md
+- Splitter: https://primevue.org/splitter.md
+- Toolbar: https://primevue.org/toolbar.md
+- ScrollPanel: https://primevue.org/scrollpanel.md
+- Stepper: https://primevue.org/stepper.md
+- Deferred: https://primevue.org/deferred.md
+
+### Overlay Components
+
+- Dialog: https://primevue.org/dialog.md
+- Drawer: https://primevue.org/drawer.md
+- ConfirmDialog: https://primevue.org/confirmdialog.md
+- ConfirmPopup: https://primevue.org/confirmpopup.md
+- Popover: https://primevue.org/popover.md
+- Tooltip: https://primevue.org/tooltip.md
+- DynamicDialog: https://primevue.org/dynamicdialog.md
+
+### Menu Components
+
+- Menu: https://primevue.org/menu.md
+- Menubar: https://primevue.org/menubar.md
+- Breadcrumb: https://primevue.org/breadcrumb.md
+- ContextMenu: https://primevue.org/contextmenu.md
+- TieredMenu: https://primevue.org/tieredmenu.md
+- MegaMenu: https://primevue.org/megamenu.md
+- PanelMenu: https://primevue.org/panelmenu.md
+- Dock: https://primevue.org/dock.md
+
+### Message Components
+
+- Toast: https://primevue.org/toast.md
+- Message: https://primevue.org/message.md
+
+### Media Components
+
+- Image: https://primevue.org/image.md
+- Carousel: https://primevue.org/carousel.md
+- Galleria: https://primevue.org/galleria.md
+- ImageCompare: https://primevue.org/imagecompare.md
+
+### Misc Components
+
+- Avatar: https://primevue.org/avatar.md
+- Badge: https://primevue.org/badge.md
+- Tag: https://primevue.org/tag.md
+- Chip: https://primevue.org/chip.md
+- ProgressBar: https://primevue.org/progressbar.md
+- ProgressSpinner: https://primevue.org/progressspinner.md
+- Skeleton: https://primevue.org/skeleton.md
+- BlockUI: https://primevue.org/blockui.md
+- Inplace: https://primevue.org/inplace.md
+- MeterGroup: https://primevue.org/metergroup.md
+- ScrollTop: https://primevue.org/scrolltop.md
+- Terminal: https://primevue.org/terminal.md
+- Fluid: https://primevue.org/fluid.md
+
+### Directives
+
+- Ripple: https://primevue.org/ripple.md
+- StyleClass: https://primevue.org/styleclass.md
+- FocusTrap: https://primevue.org/focustrap.md
+- AnimateOnScroll: https://primevue.org/animateonscroll.md
+
+### File Upload
+
+- Upload: https://primevue.org/fileupload.md
+
+### Chart
+
+- Chart: https://primevue.org/chart.md
+
+## Usage Guidelines
+
+1. **Before implementing a PrimeVue component**: Check the component's `.md` documentation for correct props, events, and usage patterns.
+
+2. **When troubleshooting**: Reference the official documentation to verify correct API usage.
+
+3. **For theming**: See https://primevue.org/theming.md
+
+4. **For Pass Through (PT)**: See https://primevue.org/passthrough.md
+
+## Example
+
+When working with DatePicker component in this project, reference:
+
+- Official docs: https://primevue.org/datepicker.md
+- Project wrapper: [DatePickerField.vue](mdc:src/components/common/DatePickerField.vue)
+- Date format constants: [dateFormat.ts](mdc:src/constants/dateFormat.ts)

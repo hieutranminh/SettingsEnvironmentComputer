@@ -1,0 +1,61 @@
+# ============================================================
+# SHARED ENVIRONMENT VARIABLES
+# ============================================================
+# These variables are shared across all environments (dev, staging, production)
+# Environment-specific values should be in .env.[mode] files
+# ============================================================
+
+# Solution Configuration
+VITE_SALONADMIN_SOLUTION_ID=3003
+
+# Gateway Version
+VITE_HEADQUARTERADMIN_GATEWAY_VERSION=1
+
+# ============================================================
+# SERVICE NAMES (Shared across all environments)
+# ============================================================
+
+# Admin Service
+VITE_ADMINS_SERVICE_NAME=admins
+VITE_ADMINS_READ_API_VERSION=1
+VITE_ADMINS_CMD_API_VERSION=1
+
+# Identities Service
+VITE_IDENTITIES_SERVICE_NAME=identities
+VITE_IDENTITIES_READ_API_VERSION=1
+VITE_IDENTITIES_CMD_API_VERSION=1
+
+# Goods Service
+VITE_GOODS_SERVICE_NAME=goods
+VITE_GOODS_READ_API_VERSION=1
+VITE_GOODS_CMD_API_VERSION=1
+
+# Boards Service
+VITE_BOARDS_SERVICE_NAME=boards
+VITE_BOARDS_READ_API_VERSION=1
+VITE_BOARDS_CMD_API_VERSION=1
+
+# Admin Sales Service
+VITE_ADMIN_SALES_SERVICE_NAME=adminsales
+VITE_ADMIN_SALES_READ_API_VERSION=1
+VITE_ADMIN_SALES_CMD_API_VERSION=1
+
+# Bookings Service
+VITE_BOOKINGS_SERVICE_NAME=bookings
+VITE_BOOKINGS_READ_API_VERSION=1
+VITE_BOOKINGS_CMD_API_VERSION=1
+
+# Sales Service
+VITE_SALES_SERVICE_NAME=sales
+VITE_SALES_READ_API_VERSION=1
+VITE_SALES_CMD_API_VERSION=1
+
+# Staffs Service
+VITE_STAFFS_SERVICE_NAME=staffs
+VITE_STAFFS_READ_API_VERSION=1
+VITE_STAFFS_CMD_API_VERSION=1
+
+# Clients Service
+VITE_CLIENTS_SERVICE_NAME=clients
+VITE_CLIENTS_READ_API_VERSION=1
+VITE_CLIENTS_CMD_API_VERSION=1

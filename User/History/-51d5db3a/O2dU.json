@@ -1,0 +1,19 @@
+{
+  "SQLServerOptions": {
+    "MaxRetryCount": 10,
+    "MaxRetryDelayInSecond": 30,
+    "ConnectionString": "Data Source=(localdb)\\MSSQLLocalDb;Initial Catalog=Identities.Cmd.Local;Integrated Security=True"
+  },
+  "AllowedHosts": "*",
+  "SupportedCultures": [ "en-US", "ko-KR" ],
+  "DefaultCulture": "en-US",
+  "AuthenticationOptions": {
+    "Secret": "ahasoft_long_secret_key_version_2"
+  },
+  "TokenInfo": {
+    "RefreshTokenLifeTimeInMinute": 4320, //3 days
+    "AccessTokenLifeTimeInMinute": 480, //8 hours
+    "SalonAdminAccessTokenLifeTimeInMinute": 60,
+    "RefreshTokenExtraInTimeSpan": "07:00:00" // 07:00 AM
+  }
+}

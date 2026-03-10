@@ -1,0 +1,17 @@
+.report-insights {
+  .report-insights-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .report-insights-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .report-insights-actions {
+      margin-left: auto;
+    }
+  }
+  .report-insights-body {
+  }
+}

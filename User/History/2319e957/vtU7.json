@@ -1,0 +1,7 @@
+{
+    "window.commandCenter": 1,
+    "cursor.cpp.disabledLanguages": [
+        "markdown",
+        "plaintext"
+    ]
+}

@@ -1,0 +1,74 @@
+import { jsPDF } from 'jspdf'
+import autoTable from 'jspdf-autotable'
+
+import type { PrintPreviewOptions } from '@/types/print-preview.types'
+
+import { addPdfHeader, addPdfFooter, addPdfSummary } from '../utils/pdf-utils'
+
+export interface TableColumn {
+  header: string
+  dataKey: string
+  width?: number
+  align?: 'left' | 'center' | 'right'
+}
+
+export interface PdfGeneratorConfig {
+  orientation?: 'portrait' | 'landscape'
+  tableColumns: TableColumn[]
+  summaryData?: Array<{ label: string; value: string | number }>
+}
+
+export const generateReportPdf = async (
+  options: PrintPreviewOptions,
+  data: unknown[],
+  config: PdfGeneratorConfig,
+): Promise<Blob> => {
+  const doc = new jsPDF({
+    orientation: config.orientation || 'landscape',
+    unit: 'mm',
+    format: 'a4',
+  })
+
+  // Add header
+  addPdfHeader(doc, options)
+
+  // Calculate column widths
+  const totalWidth = config.orientation === 'portrait' ? 170 : 250
+  const defaultWidth = totalWidth / config.tableColumns.length
+
+  const columnStyles: Record<number, { cellWidth: number; halign: string }> = {}
+  config.tableColumns.forEach((col, index) => {
+    columnStyles[index] = {
+      cellWidth: col.width || defaultWidth,
+      halign: col.align || 'left',
+    }
+  })
+  // Add table
+  autoTable(doc, {
+    head: [config.tableColumns.map((col) => col.header)],
+    body: (data as Record<string, unknown>[]).map((row) => config.tableColumns.map((col) => String(row[col.dataKey] || ''))),
+    startY: 40,
+    theme: 'grid',
+    styles: {
+      font: 'helvetica',
+      fontSize: 10,
+      cellPadding: 3,
+    },
+    headStyles: {
+      fillColor: [66, 139, 202],
+      textColor: 255,
+      fontStyle: 'bold',
+    },
+    columnStyles,
+    didDrawPage: (pageData: { pageNumber: number }) => {
+      addPdfFooter(doc, pageData.pageNumber)
+    },
+  })
+
+  // Add summary if provided
+  if (config.summaryData) {
+    addPdfSummary(doc, config.summaryData)
+  }
+
+  return doc.output('blob')
+}

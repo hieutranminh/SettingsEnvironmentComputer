@@ -1,0 +1,128 @@
+# Vue 3 Project Rules for Cursor
+
+## Project Overview
+This is a Vue 3.5+ project with TypeScript, using Composition API and modern development practices.
+
+## Key Technologies
+- Vue 3.5+ with Composition API and `<script setup>`
+- TypeScript for type safety
+- Vite for build tooling
+- SCSS for styling
+- pnpm for package management
+- Pinia for state management
+- Vue Router for routing
+
+## Directory Structure Rules
+
+### External Libraries Must Go in `src/plugins/`
+- ALL external libraries, services, and integrations MUST be placed in `src/plugins/`
+- This includes: API services, HTTP clients, third-party integrations, etc.
+- Each plugin should have its own file in `src/plugins/`
+- Plugins should export a Vue plugin with `install` method
+
+### Component Organization
+- `src/components/common/` - Reusable base components
+- `src/components/forms/` - Form-related components
+- `src/components/modals/` - Modal and dialog components
+- `src/components/layout/` - Layout-specific components
+
+### Business Logic
+- `src/composables/` - Reusable Composition API logic
+- `src/stores/` - Pinia stores for state management
+- `src/utils/` - Pure utility functions
+
+### Configuration
+- `src/types/` - TypeScript interfaces and types
+- `src/constants/` - Application constants
+- `src/locales/` - i18n translation files
+
+## Coding Standards
+
+### Vue Components
+- Always use `<script setup>` syntax
+- Use Composition API consistently
+- Follow Vue 3 best practices
+- Implement proper error handling
+- Use semantic HTML elements
+- Follow accessibility guidelines (WCAG 2.1)
+
+### TypeScript
+- Use strict TypeScript mode
+- Prefer interfaces over type aliases for complex object shapes
+- Use typed objects for complex state management
+- Leverage discriminated unions for complex type scenarios
+
+### File Naming
+- Components: PascalCase (e.g., `UserProfile.vue`)
+- Pages/Views: PascalCase (e.g., `HomePage.vue`)
+- Composables: camelCase with `use` prefix (e.g., `useAuth.ts`)
+- Utils: camelCase (e.g., `formatDate.ts`)
+- Types: PascalCase (e.g., `User.ts`)
+- Constants: SCREAMING_SNAKE_CASE (e.g., `API_ENDPOINTS.ts`)
+
+### Function Naming
+- Use descriptive variable and function names
+- Event functions should be named with "handle" prefix (e.g., `handleClick`, `handleKeyDown`)
+- Use consts instead of functions: `const toggle = () =>`
+
+### Error Handling
+- Always raise errors explicitly, never silently ignore them
+- Use specific error types that clearly indicate what went wrong
+- Error messages should be clear and actionable
+
+### Accessibility
+- Implement accessibility features on elements
+- Use proper ARIA labels and roles
+- Ensure keyboard navigation support
+- Add tabindex, aria-label, on:click, and on:keydown attributes
+
+## Plugin Development Rules
+
+### Creating New Plugins
+1. Create file in `src/plugins/`
+2. Export a Vue plugin with `install` method
+3. Use dependency injection with `app.provide()`
+4. Add to global properties if needed with `app.config.globalProperties`
+
+### Example Plugin Structure:
+```typescript
+import type { App } from 'vue'
+
+export default {
+  install: (app: App) => {
+    // Plugin logic here
+    app.provide('serviceName', serviceInstance)
+    app.config.globalProperties.$serviceName = serviceInstance
+  }
+}
+```
+
+## State Management
+- Use Pinia for global state management
+- Use composables for reusable reactive logic
+- Keep state minimal and focused
+
+## Styling
+- Use SCSS for styling
+- Follow BEM methodology for CSS classes
+- Use CSS custom properties for theming
+- Implement responsive design
+
+## Testing
+- Write unit tests for components
+- Test composables and utilities
+- Use Vitest for testing framework
+
+## Performance
+- Use lazy loading for routes
+- Optimize component rendering
+- Monitor bundle size
+- Use proper caching strategies
+
+## Security
+- Validate all user inputs
+- Sanitize user-generated content
+- Implement proper authentication
+- Use HTTPS in production
+
+Remember: ALL external libraries and services MUST be placed in `src/plugins/` directory! 

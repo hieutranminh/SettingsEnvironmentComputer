@@ -1,0 +1,42 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.format.enable": true,
+  "i18n-ally.localesPaths": [
+    "src/api/messages",
+    "src/components/messages",
+    "src/pages/messages",
+    "src/store/messages",
+    "src/view-model/messages",
+    "src/modules/api/messages"
+  ],
+  // Vue Language Server settings for Go to Definition
+  "volar.autoCompleteRefs": true,
+  "volar.codeLens.pugTools": false,
+  "volar.codeLens.scriptSetupTools": false,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "javascript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.suggest.autoImports": true,
+  "javascript.suggest.autoImports": true,
+  // Enable Go to Definition
+  "editor.gotoLocation.multipleDefinitions": "gotoAndPeek",
+  "editor.gotoLocation.multipleReferences": "gotoAndPeek",
+  "editor.gotoLocation.multipleImplementations": "gotoAndPeek",
+  // Path resolution settings
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}
+

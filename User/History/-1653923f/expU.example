@@ -1,0 +1,58 @@
+# Solution Configuration
+SALONADMIN_SOLUTION_ID=3003
+
+# Gateway Configuration
+HEADQUARTERADMIN_GATEWAY_BASEURL=https://your-gateway-url.azurewebsites.net
+HEADQUARTERADMIN_GATEWAY_VERSION=1
+
+# Notification Configuration
+NOTIFICATION_READ_API_BASEURL=https://your-notification-url.service.signalr.net/client/?hub=salonheadquarter
+
+# Service Names
+ADMINS_SERVICE_NAME=admins
+IDENTITIES_SERVICE_NAME=identities
+GOODS_SERVICE_NAME=goods
+BOARDS_SERVICE_NAME=boards
+ADMIN_SALES_SERVICE_NAME=adminsales
+BOOKINGS_SERVICE_NAME=bookings
+SALES_SERVICE_NAME=sales
+STAFFS_SERVICE_NAME=staffs
+CLIENTS_SERVICE_NAME=clients
+
+# API Versions
+ADMINS_READ_API_VERSION=1
+ADMINS_CMD_API_VERSION=1
+IDENTITIES_READ_API_VERSION=1
+IDENTITIES_CMD_API_VERSION=1
+GOODS_READ_API_VERSION=1
+GOODS_CMD_API_VERSION=1
+BOARDS_READ_API_VERSION=1
+BOARDS_CMD_API_VERSION=1
+ADMIN_SALES_READ_API_VERSION=1
+ADMIN_SALES_CMD_API_VERSION=1
+BOOKINGS_READ_API_VERSION=1
+BOOKINGS_CMD_API_VERSION=1
+SALES_READ_API_VERSION=1
+SALES_CMD_API_VERSION=1
+STAFFS_READ_API_VERSION=1
+STAFFS_CMD_API_VERSION=1
+CLIENTS_READ_API_VERSION=1
+CLIENTS_CMD_API_VERSION=1
+
+# Login URLs
+LOGIN_URL_DEFAULT=login
+LOGIN_URL_KR=login
+
+# Azure Storage URLs
+AZURE_STORAGE_BOARD_URL=https://your-storage-account.blob.core.windows.net/boards/
+AZURE_STORAGE_CLIENT_URL=https://your-storage-account.blob.core.windows.net/clients/
+AZURE_STORAGE_ADMINS_URL=https://your-storage-account.blob.core.windows.net/admins/
+
+# Payment Configuration
+IAMPORT_KEY=your_iamport_key_here
+
+# Monitoring Configuration
+HEADQUARTER_ADMIN_SENTRY_DSN=https://your-sentry-dsn@sentry.io/project-id
+
+# API Base URL (for Axios configuration)
+VITE_API_BASE_URL=http://localhost:3000/api

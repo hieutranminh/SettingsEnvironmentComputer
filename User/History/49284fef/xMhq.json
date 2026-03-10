@@ -1,0 +1,48 @@
+{
+  "javascript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // Vue specific settings
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+
+  // Enable go to definition
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+
+  // File associations
+  "files.associations": {
+    "*.vue": "vue"
+  },
+
+  // Path mappings for better IntelliSense
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // JavaScript/TypeScript language features
+  "javascript.validate.enable": true,
+  "typescript.validate.enable": true,
+
+  // Improve performance
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true
+  },
+
+  // Search exclude
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/patches": true,
+    "**/test": true
+  }
+}

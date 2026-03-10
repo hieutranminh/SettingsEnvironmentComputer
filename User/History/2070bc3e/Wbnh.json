@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom", "dom.iterable"],
+    "allowJs": true,
+    "checkJs": false,
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "API/*": ["src/api/*"],
+      "Pages/*": ["src/pages/*"],
+      "Store/*": ["src/store/*"],
+      "Models/*": ["src/models/*"],
+      "Modules/*": ["src/modules/*"],
+      "Workers/*": ["src/workers/*"],
+      "HocHelpers": ["src/helpers/hoc"],
+      "Router": ["src/config/router.js"],
+      "Utils/*": ["src/helpers/utils/*"],
+      "VuexStore": ["src/store/store.js"],
+      "Caches/*": ["src/helpers/cache/*"],
+      "ViewModels/*": ["src/view-model/*"],
+      "Mixins/*": ["src/helpers/mixins/*"],
+      "Components/*": ["src/components/*"],
+      "Validators/*": ["src/validators/*"],
+      "Constant": ["src/config/constant.js"],
+      "HTTPHelpers": ["src/helpers/http.js"],
+      "Options/*": ["src/helpers/options/*"],
+      "Sprites": ["src/template/_sprites.scss"],
+      "CommonHelpers": ["src/helpers/common.js"],
+      "Translate": ["src/translate/translate.js"],
+      "OptionsHelpers": ["src/helpers/options.js"],
+      "CommonComponents/*": ["src/components/common/*"],
+      "DatetimeHelpers": ["src/helpers/datetime-common.js"],
+      "SystemDataRules": ["src/helpers/system-data-rules.js"],
+      "PermissionHelpers": ["src/helpers/permission-utils.js"],
+      "MessageEncodingHelpers": ["src/helpers/message-encoding.js"],
+      "APIURLGeneratorHelpers": ["src/helpers/api-url-generator.js"],
+      "SpeechRecognitionHelpers": ["src/helpers/speech-recognition.js"]
+    }
+  },
+  "include": [
+    "src/**/*.js",
+    "src/**/*.vue",
+    "src/**/*.json"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "patches",
+    "test",
+    "**/*.test.js",
+    "**/*.spec.js"
+  ]
+}

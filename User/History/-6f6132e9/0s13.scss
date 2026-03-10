@@ -1,0 +1,59 @@
+.modal-aha-ai-setup {
+  & > .modal-dialog {
+    max-width: 1200px;
+  }
+
+  .settings {
+    .settings__group {
+      .field {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+        .field__label {
+          width: 30%;
+          .label {
+          }
+        }
+        .field__item {
+          .custom-radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .custom-control-label::before,
+            .custom-control-label::after {
+              top: 3px;
+            }
+          }
+        }
+      }
+    }
+    .settings__group--outside {
+      .field {
+        .field__item {
+          .aha-input-text {
+            width: 200px;
+            height: 30px !important;
+          }
+        }
+      }
+    }
+    .settings__group--inside {
+      background-color: $gray-lighten;
+      padding: 20px;
+      border: 1px solid $gray;
+      .field {
+        .field__item {
+          .field__item__progress {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .custom-range {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

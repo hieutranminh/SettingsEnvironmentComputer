@@ -1,0 +1,112 @@
+# Vue Component Patterns
+
+This project follows specific Vue 3 component patterns for consistency and maintainability.
+
+## Component Structure Template:
+
+```vue
+<template>
+  <!-- Template content -->
+</template>
+
+<script setup lang="ts">
+// Imports
+import { ref, computed } from 'vue'
+import type { ComponentProps } from '@/types'
+
+// Props definition with TypeScript
+interface Props {
+  title: string
+  items?: string[]
+}
+
+const props = defineProps<Props>()
+
+// Emits definition with TypeScript
+interface Emits {
+  (e: 'update', value: string): void
+  (e: 'delete', id: number): void
+}
+
+const emit = defineEmits<Emits>()
+
+// Reactive state
+const loading = ref(false)
+const data = ref<string[]>([])
+
+// Computed properties
+const filteredData = computed(() => {
+  return data.value.filter((item) => item.includes(props.title))
+})
+
+// Methods
+const handleUpdate = (value: string): void => {
+  emit('update', value)
+}
+
+const handleDelete = (id: number): void => {
+  emit('delete', id)
+}
+</script>
+
+<style scoped lang="scss">
+// Component styles
+</style>
+```
+
+## Component Rules:
+
+1. **Script Setup**: Always use `<script setup lang="ts">`
+2. **Props Interface**: Define props interface before `defineProps<T>()`
+3. **Emits Interface**: Define emits interface before `defineEmits<T>()`
+4. **Type Imports**: Import types from `@/types` directory
+5. **Reactive State**: Use `ref()` for primitives, `reactive()` for objects
+6. **Computed Properties**: Use `computed()` for derived state
+7. **Method Naming**: Use descriptive names with `handle` prefix for event handlers
+8. **Return Types**: Always define return types for functions
+9. **Error Handling**: Throw errors with descriptive messages
+10. **Scoped Styles**: Use `scoped` attribute and SCSS for component styles
+
+## Component Naming:
+
+- **Views**: PascalCase with `View` suffix (e.g., `UserListView.vue`)
+- **Components**: PascalCase (e.g., `UserCard.vue`)
+- **Layouts**: PascalCase with `Layout` suffix (e.g., `MainLayout.vue`)
+
+## File Organization:
+
+- **Single Responsibility**: Each component should have one clear purpose
+- **Feature-based**: Group related components in feature directories
+- **Index Files**: Use `index.vue` for default exports in feature directories
+- **Types**: Define component-specific types in the same file or in `@/types`
+
+## Props and Emits Best Practices:
+
+1. **Required Props**: Mark required props without default values
+2. **Optional Props**: Use `?` for optional props
+3. **Default Values**: Use `withDefaults()` for props with defaults
+4. **Validation**: Use TypeScript for prop validation, avoid runtime validation
+5. **Emits**: Always define emit types for better type safety
+
+## Example with Defaults:
+
+```vue
+<script setup lang="ts">
+interface Props {
+  title: string
+  count?: number
+  items?: string[]
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  count: 0,
+  items: () => [],
+})
+</script>
+```
+
+description:
+globs:
+alwaysApply: false
+
+---

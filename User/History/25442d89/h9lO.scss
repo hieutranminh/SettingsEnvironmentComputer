@@ -1,0 +1,27 @@
+.report-ai-summary {
+  position: relative;
+  padding: 10px;
+  border: 1px solid $gray;
+  display: flex;
+  gap: 10px;
+  .report-ai-summary-content {
+    word-break: break-word;
+    white-space: break-spaces;
+
+    strong {
+      font-weight: 700;
+      em {
+        font-weight: 700;
+      }
+    }
+    em {
+      font-style: italic;
+    }
+  }
+
+  .icon-ai {
+    margin-left: auto;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+}

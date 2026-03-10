@@ -1,0 +1,8 @@
+// Responsive visibility classes
+.mobile-visible {
+  @include mobile-visible;
+}
+
+.desktop-visible {
+  @include desktop-visible;
+}

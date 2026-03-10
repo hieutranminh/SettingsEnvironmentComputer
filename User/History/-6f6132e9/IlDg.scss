@@ -1,0 +1,28 @@
+.modal-aha-ai-setup {
+  .modal-dialog {
+    max-width: 650px;
+  }
+
+  .settings {
+    .settings__group {
+      .field {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .field__label {
+          .label {
+          }
+        }
+        .field__item {
+          .field__item__progress {
+          }
+        }
+      }
+    }
+    .settings__group--inside {
+      background-color: $gray-lighten;
+      padding: 10px;
+      border: 1px solid $gray;
+    }
+  }
+}

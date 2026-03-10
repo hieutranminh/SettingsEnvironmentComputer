@@ -1,0 +1,28 @@
+.calendar-booking-date {
+  &.vc-container {
+    width: 100%;
+    .vc-day {
+      .vc-day-content {
+        &:focus {
+          font-weight: 500;
+        }
+      }
+
+      &.is-not-in-month {
+        * {
+          opacity: 0.6;
+        }
+      }
+      &.is-today {
+        .vc-day-content {
+          background-color: $gray-light;
+        }
+      }
+    }
+  }
+}
+.calendar-booking-date--mobile {
+  &.vc-container {
+    width: auto;
+  }
+}

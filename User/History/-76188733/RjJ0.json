@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "notFound": "Not Found"
+  },
+  "home": {
+    "title": "Welcome to Vue Cursor AI",
+    "description": "A professional Vue 3.5 boilerplate with TypeScript, Vite, and modern tooling.",
+    "currentTime": "Current Time",
+    "features": {
+      "vue": {
+        "title": "Vue 3.5",
+        "description": "Latest Vue.js with Composition API and TypeScript support"
+      },
+      "typescript": {
+        "title": "TypeScript",
+        "description": "Full TypeScript integration for better development experience"
+      },
+      "i18n": {
+        "title": "Internationalization",
+        "description": "Multi-language support with vue-i18n"
+      }
+    },
+    "counter": {
+      "title": "Counter Example",
+      "count": "Count: {count}",
+      "increment": "Increment",
+      "decrement": "Decrement"
+    }
+  },
+  "about": {
+    "title": "About This Project",
+    "description": "This is a professional Vue 3.5 boilerplate that includes all the modern tools and libraries you need for building scalable applications.",
+    "techStack": {
+      "title": "Technology Stack",
+      "vue": "Vue 3.5 with Composition API",
+      "typescript": "TypeScript for type safety",
+      "vite": "Vite for fast development and building",
+      "pinia": "Pinia for state management",
+      "vueRouter": "Vue Router for navigation",
+      "vueI18n": "Vue I18n for internationalization",
+      "axios": "Axios for HTTP requests",
+      "dayjs": "Day.js for date manipulation",
+      "scss": "SCSS for advanced styling"
+    },
+    "features": {
+      "title": "Key Features",
+      "i18n": "Internationalization (English & Korean)",
+      "stateManagement": "Pinia state management",
+      "routing": "Vue Router with lazy loading",
+      "httpClient": "Axios with interceptors",
+      "dateTime": "Day.js with timezone support",
+      "styling": "SCSS with global imports",
+      "linting": "ESLint + Prettier configuration"
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "goHome": "Go Home"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+} 

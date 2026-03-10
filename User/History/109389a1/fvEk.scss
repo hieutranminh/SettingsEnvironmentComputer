@@ -1,0 +1,164 @@
+.prepaid-cards {
+  .prepaid-cards__header {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+
+    ::v-deep {
+      .custom-control-label {
+        &::before,
+        &::after {
+          // top: 2px;
+        }
+      }
+    }
+  }
+
+  .prepaid-cards__container {
+    overflow: auto;
+    margin-bottom: 15px;
+  }
+
+  .prepaid-cards__table {
+    th {
+      white-space: nowrap;
+    }
+
+    tbody {
+      tr {
+        transition: none;
+
+        // Bold for card name and balance when not expired
+        &.prepaid-card-row:not(.prepaid-card-row--expired) {
+          .prepaid-cards__prepaid-card-name,
+          .prepaid-cards__balance {
+            font-weight: bold;
+          }
+        }
+
+        td {
+          padding: 2px 5px;
+          min-width: 120px;
+          transition: all 0.2s linear;
+
+          .prepaid-cards__prepaid-card-name {
+            span {
+              color: $blue;
+            }
+          }
+        }
+
+        &.prepaid-card-row {
+          &.prepaid-card-row--expired {
+            background-color: $gray-expired;
+          }
+        }
+      }
+    }
+
+    .prepaid-cards__actions {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      justify-content: center;
+
+      .prepaid-cards__actions-button {
+        margin: unset;
+      }
+    }
+  }
+
+  // Mobile
+  .prepaid-cards__wrapper {
+    ::v-deep {
+      &.row {
+        margin: 0;
+      }
+    }
+
+    .prepaid-cards__inner {
+      padding: 6px 4px;
+      margin-bottom: 2px;
+      border: 1px solid $gray;
+      position: relative;
+
+      &.prepaid-card-row--expired {
+        background-color: $gray-expired;
+      }
+
+      &.prepaid-cards__inner--active {
+        background: $green-lighten;
+      }
+
+      p {
+        padding: 0;
+      }
+
+      .prepaid-cards__prepaid-card-name {
+        span {
+          display: inline-block;
+          margin-left: 2px;
+          color: $blue;
+        }
+      }
+
+      // Bold for card name and balance when not expired (mobile)
+      &:not(.prepaid-card-row--expired) {
+        .prepaid-cards__prepaid-card-name,
+        .prepaid-cards__prepaid-card-balance {
+          font-weight: bold;
+        }
+
+        @include mobile {
+          .prepaid-cards__prepaid-card-name:first-child,
+          .prepaid-cards__prepaid-card-balance:first-child {
+            p {
+              font-weight: 400;
+            }
+          }
+          .prepaid-cards__prepaid-card-name:last-child,
+          .prepaid-cards__prepaid-card-balance:last-child {
+            p {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .prepaid-cards__prepaid-card-group-button {
+        display: flex;
+        gap: 5px;
+        margin-top: 10px;
+
+        ::v-deep {
+          .a-button {
+            height: 29px;
+            min-width: auto;
+            padding: 3px 10px;
+            font-weight: normal;
+            border-radius: 4px;
+            background: $white;
+          }
+        }
+      }
+
+      .prepaid-cards__show-more-text {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+
+        &.prepaid-cards__show-more-text--active {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  .prepaid-cards__table-empty {
+    padding: 4px;
+    text-align: center;
+    border: 1px solid $gray;
+  }
+}

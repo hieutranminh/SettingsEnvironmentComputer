@@ -1,0 +1,73 @@
+/* Content Script Styles */
+
+/* Highlight style for focused inputs */
+.fake-data-highlight {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px;
+  transition: outline 0.2s ease;
+}
+
+/* Floating button styles (if enabled) */
+#fake-data-generator-btn {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+#fake-data-generator-btn:active {
+  transform: scale(0.95) !important;
+}
+
+/* Tooltip styles */
+.fake-data-tooltip {
+  position: absolute;
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999999;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: fadeIn 0.2s ease;
+}
+
+.fake-data-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #1a1a2e;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success animation for filled inputs */
+.fake-data-success {
+  animation: successPulse 0.5s ease;
+}
+
+@keyframes successPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(102, 234, 126, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(102, 234, 126, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(102, 234, 126, 0);
+  }
+}
+

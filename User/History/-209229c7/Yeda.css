@@ -1,0 +1,64 @@
+/* PrimeVue font size customization using CSS custom properties */
+:root {
+  /* Override PrimeVue's base font size - this affects all components */
+  --p-font-size-base: 14px;
+
+  /* Component-specific font sizes (optional fine-tuning) */
+  --p-button-font-size: 14px;
+  --p-input-font-size: 14px;
+  --p-dropdown-font-size: 14px;
+  --p-menu-item-font-size: 14px;
+  --p-datatable-cell-font-size: 14px;
+  --p-panel-header-font-size: 14px;
+  --p-dialog-header-font-size: 16px; /* Keep headers slightly larger */
+
+  /* Match PrimeVue documentation line-height (1.42857 ≈ 1/0.7) */
+  --p-form-field-line-height: 1.42857;
+}
+
+/* Apply Inter font as default across the entire application */
+body {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  font-feature-settings:
+    'cv05', 'cv08', 'cv11'; /* Enable Inter's stylistic sets for better readability */
+  font-variation-settings: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--p-font-size-base);
+}
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent line height and improve readability */
+html {
+  line-height: var(--p-form-field-line-height, 1.42857);
+  color-scheme: light;
+  font-size: var(--p-font-size-base);
+}
+
+/* Improve button and input styling */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+}

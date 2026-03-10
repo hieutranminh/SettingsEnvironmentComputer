@@ -1,0 +1,93 @@
+/* CSS Layer ordering for better cascade control */
+@layer primevue, app-styles;
+
+// Reset and base styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+  color: $black;
+}
+
+// Global font family application
+html,
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $gray-1000;
+  height: 100%;
+}
+
+#app {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+
+// Ensure all elements inherit the font family
+* {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 100%;
+  padding: 10px 20px;
+
+  .app-title {
+    span {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      margin-left: 15px;
+    }
+    border-bottom: 1px solid $black;
+  }
+
+  .app-content {
+    padding: 20px;
+
+    @media (width <= 768px) {
+      padding: 10px;
+    }
+  }
+
+  @media (width <= 768px) {
+    padding: 4px;
+  }
+}
+
+.p-datepicker-panel {
+  .p-datepicker-day-view {
+    .p-datepicker-other-month {
+      .p-datepicker-day {
+        color: var(--p-gray-400);
+      }
+    }
+  }
+}
+
+@layer app-styles {
+  .card-note {
+    line-height: 1.5;
+  }
+}

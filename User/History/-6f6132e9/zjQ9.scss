@@ -1,0 +1,39 @@
+.modal-aha-ai-setup {
+  & > .modal-dialog {
+    max-width: 1200px;
+  }
+
+  .settings {
+    .settings__group {
+      .field {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .field__label {
+          width: 30%;
+          .label {
+          }
+        }
+        .field__item {
+          .field__item__progress {
+          }
+          .custom-radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            // .custom-control {
+            //   .custom-control-label::before {
+            //     top: 2px;
+            //   }
+            // }
+          }
+        }
+      }
+    }
+    .settings__group--inside {
+      background-color: $gray-lighten;
+      padding: 10px;
+      border: 1px solid $gray;
+    }
+  }
+}

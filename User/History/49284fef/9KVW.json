@@ -1,0 +1,27 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.format.enable": true,
+  "i18n-ally.localesPaths": [
+    "src/api/messages",
+    "src/components/messages",
+    "src/pages/messages",
+    "src/store/messages",
+    "src/view-model/messages",
+    "src/modules/api/messages"
+  ],
+}
+

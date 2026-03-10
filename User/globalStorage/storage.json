@@ -1,0 +1,114 @@
+{
+    "telemetry.macMachineId": "3037436ee6caea32f6f107677a0c14804ea8ccf4235695c5fd149b375d85bbe8",
+    "telemetry.machineId": "7279779594f4634fe206a262fc59bf86f851a4e4cbfddd97a93916c4ae076767",
+    "telemetry.sqmId": "{1C46A4E2-896D-4A5E-94C1-AAD121203E11}",
+    "telemetry.devDeviceId": "600ccb91-0436-4745-9fc4-d0b7444b086e",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///e%3A/Ahasoft/ahasoft-build"
+            },
+            {
+                "folderUri": "file:///e%3A/Ahasoft/ahaplus-shop/Application/VueJS"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///e%3A/Ahasoft/ahaplus-shop/Application/VueJS": "__default__profile__",
+            "file:///e%3A/Ahasoft/lk_warehouse_cms-develop": "__default__profile__",
+            "file:///e%3A/Ahasoft/vue-prime": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-headquarter-vue3": "__default__profile__",
+            "file:///e%3A/Personal/vue-cursor-ai": "__default__profile__",
+            "file:///e%3A/Personal/nuxt-cursor-ai": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-headquarter-v2": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-headquarter-v2/Application/VueJS": "__default__profile__",
+            "file:///e%3A/Ahasoft/lk-warehouse-cms": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-coreservices/Application": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-admin": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-admin/Application/VueJS": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahaplus-extension/generate-data-extension": "__default__profile__",
+            "file:///e%3A/Ahasoft/ahasoft-build": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#282a36",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#f8f8f2",
+            "background": "#282a36",
+            "editorBackground": "#282a36",
+            "titleBarBackground": "#21222c",
+            "activityBarBackground": "#343746",
+            "sideBarBackground": "#21222c",
+            "statusBarBackground": "#191a21",
+            "statusBarNoFolderBackground": "#191a21"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 0,
+            "sideBarWidth": 214,
+            "auxiliarySideBarWidth": 766,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///e%3A/Ahasoft/ahasoft-build",
+            "backupPath": "C:\\Users\\PC14\\AppData\\Roaming\\Cursor\\Backups\\d30b8646f7b0a17014dc190db5cc1885",
+            "uiState": {
+                "mode": 0,
+                "x": 320,
+                "y": 140,
+                "width": 1280,
+                "height": 800
+            }
+        },
+        "openedWindows": []
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "auxiliarySideBarWidth": [
+                766,
+                [
+                    "10e6e32cb7d2fb6a9106c7bc7523593c",
+                    "d1a9bb9559a336d8cb2d5683adf4be2c",
+                    "944f6e42e05421827496922bba2d07b3",
+                    "4d74ce3d264d84651ca753b0cd49d632",
+                    "b1d94a3930b8083333d3483b625596e1",
+                    "e5f2e4f21d2f8317dac2811d1bb98ff2",
+                    "d820b2d29a481d957b6984c6305bf89a",
+                    "5afa1c87ce04291d77384bfa3ac9c221",
+                    "417f238d4662dad915c48dc7a83a0437",
+                    "8185eb6eff355e6562df63307cd81638",
+                    "035794856ebd9240818f75d904cf45f5",
+                    "c31ccf64cc9a41ba90add57b2ef0f154",
+                    "ace80b7cad0efd7133e4072f3c4ad7bd",
+                    "924e64c925c60cdd0505e263499cb2e1",
+                    "7d40c36210c78d67186ed4e26443a80a",
+                    "3e3d00d54075ba9dd21562e3d3b87f61",
+                    "8ac960f2700dc0ef7aa72b461a9becbb",
+                    "36809c63ed46c46fdce2d30623165875",
+                    "815d8f9a502e076f28e5966243cca02f",
+                    "10b5586b8c5d51488622d0aac57282fc",
+                    "2b91cf9b64e3fb580645a669cd555a1a",
+                    "fc0b4d1e620aeed30d1ceb6e456c0729",
+                    "1559a1ee9eb69caafa23fc82abbce1f3",
+                    "0a579eb902783180433c8bd07a6bf51a",
+                    "39d143c9051ed85b5de7dcce925d1f1b",
+                    "2d88b889c190f2d3e3ce44074a195a4b",
+                    "e8e656ee4eaf5e911813bcc7017d152c"
+                ]
+            ]
+        }
+    }
+}

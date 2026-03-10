@@ -1,0 +1,23 @@
+# Local Environment Configuration
+# Use this file for local development with mock/local services
+
+# Application Configuration
+VITE_APP_NAME="Ahasoft System"
+VITE_APP_VERSION="1.0.0"
+VITE_APP_ENV="local"
+
+# API Configuration
+VITE_API_BASE_URL="http://localhost:3000/api"
+VITE_API_TIMEOUT=30000
+
+# Feature Flags
+VITE_ENABLE_DEVTOOLS=true
+VITE_ENABLE_MOCK_API=true
+VITE_ENABLE_DEBUG_MODE=true
+
+# Logging Configuration
+VITE_LOG_LEVEL="debug"
+
+# Optional: Analytics & Monitoring (disabled for local)
+# VITE_SENTRY_DSN=
+# VITE_GA_TRACKING_ID=

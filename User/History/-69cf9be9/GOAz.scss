@@ -1,0 +1,29 @@
+.modal-aha-ai {
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .modal-aha-ai-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .modal-aha-ai-top__title {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      gap: 10px;
+      .question-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .setting-icon {
+      margin-left: auto;
+      width: 20px;
+      height: 20px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

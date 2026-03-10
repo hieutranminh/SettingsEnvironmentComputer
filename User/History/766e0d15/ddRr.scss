@@ -1,0 +1,27 @@
+.report-insights {
+  .report-insights-header {
+    display: flex;
+    align-items: center;
+    .report-insights-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      h3 {
+        font-weight: 600;
+        line-height: 1;
+      }
+    }
+    .report-insights-actions {
+      margin-left: auto;
+    }
+  }
+  .report-insights-body {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid $gray;
+    p {
+      word-break: break-word;
+      white-space: break-spaces;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// Global styles - Using SCSS variables for consistency
+// Variables and mixins are automatically injected by Vite
+
+// Reset and base styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-sans;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $gray-900;
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "notFound": "페이지 없음"
+  },
+  "home": {
+    "title": "Vue Cursor AI에 오신 것을 환영합니다",
+    "description": "TypeScript, Vite 및 현대적인 도구를 사용한 전문적인 Vue 3.5 보일러플레이트입니다.",
+    "currentTime": "현재 시간",
+    "features": {
+      "vue": {
+        "title": "Vue 3.5",
+        "description": "Composition API와 TypeScript 지원을 포함한 최신 Vue.js"
+      },
+      "typescript": {
+        "title": "TypeScript",
+        "description": "더 나은 개발 경험을 위한 완전한 TypeScript 통합"
+      },
+      "i18n": {
+        "title": "국제화",
+        "description": "vue-i18n을 사용한 다국어 지원"
+      }
+    },
+    "counter": {
+      "title": "카운터 예제",
+      "count": "카운트: {count}",
+      "increment": "증가",
+      "decrement": "감소"
+    }
+  },
+  "about": {
+    "title": "프로젝트 소개",
+    "description": "이것은 확장 가능한 애플리케이션을 구축하는 데 필요한 모든 현대적인 도구와 라이브러리를 포함하는 전문적인 Vue 3.5 보일러플레이트입니다.",
+    "techStack": {
+      "title": "기술 스택",
+      "vue": "Composition API가 포함된 Vue 3.5",
+      "typescript": "타입 안전성을 위한 TypeScript",
+      "vite": "빠른 개발 및 빌드를 위한 Vite",
+      "pinia": "상태 관리를 위한 Pinia",
+      "vueRouter": "네비게이션을 위한 Vue Router",
+      "vueI18n": "국제화를 위한 Vue I18n",
+      "axios": "HTTP 요청을 위한 Axios",
+      "dayjs": "날짜 조작을 위한 Day.js",
+      "scss": "고급 스타일링을 위한 SCSS"
+    },
+    "features": {
+      "title": "주요 기능",
+      "i18n": "국제화 (영어 및 한국어)",
+      "stateManagement": "Pinia 상태 관리",
+      "routing": "지연 로딩이 포함된 Vue Router",
+      "httpClient": "인터셉터가 포함된 Axios",
+      "dateTime": "타임존 지원이 포함된 Day.js",
+      "styling": "전역 가져오기가 포함된 SCSS",
+      "linting": "ESLint + Prettier 구성"
+    }
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "description": "찾고 계신 페이지가 존재하지 않습니다.",
+    "goHome": "홈으로 가기"
+  },
+  "footer": {
+    "rights": "모든 권리 보유."
+  }
+} 

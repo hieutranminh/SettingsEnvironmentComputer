@@ -1,0 +1,84 @@
+.modal-aha-ai-setup {
+  & > .modal-dialog {
+    max-width: 1200px;
+  }
+
+  .settings {
+    .settings__group {
+      .field {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        .field__label {
+          width: 30%;
+        }
+        .field__item {
+          .custom-radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .custom-control-label::before,
+            .custom-control-label::after {
+              top: 3px;
+            }
+          }
+          .switch-checkbox {
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+    .settings__group--outside {
+      .field {
+        .field__item {
+          .a-input {
+            width: 200px;
+            height: 30px !important;
+          }
+        }
+      }
+    }
+    .settings__group--inside {
+      background-color: $gray-lighten;
+      padding: 20px;
+      border: 1px solid $gray;
+      .field {
+        .field__item {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          gap: 40px;
+          .field__item__progress {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            .custom-range {
+              border: none;
+            }
+          }
+          .field__item__sub-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            label {
+              flex-shrink: 0;
+            }
+            .multiselect {
+              height: 30px;
+              width: 160px;
+              .multiselect__tags {
+                height: 30px;
+              }
+            }
+          }
+          .field__item__note {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+        }
+      }
+    }
+  }
+}

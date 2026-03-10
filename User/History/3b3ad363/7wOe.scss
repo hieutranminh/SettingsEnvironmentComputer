@@ -1,0 +1,29 @@
+.actions__right {
+  display: flex;
+
+  .action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-size: 28px;
+    line-height: 1;
+    border-radius: 50%;
+
+    &.action--send {
+      background: $gray-darken;
+      color: $white;
+    }
+
+    &.action--cancel {
+      background: $gray-darken;
+      color: $white;
+    }
+
+    &.action--voice {
+      font-size: 24px;
+    }
+  }
+}
+

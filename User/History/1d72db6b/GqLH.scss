@@ -1,0 +1,141 @@
+.booking-action__form {
+  .booking-action__booking-details {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 5px;
+    margin-top: 15px;
+    border-bottom: 1px solid $gray-dark;
+  }
+
+  .booking-action__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0px -15px;
+    background-color: $white;
+
+    .booking-action__form-search {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0px 15px;
+    }
+
+    .booking-action__form-client {
+      padding: 15px;
+      flex: 0 0 485px;
+    }
+
+    .booking-action__form-no-client {
+      flex: 1;
+    }
+
+    .booking-action__form-booking {
+      flex: 1;
+      padding: 0 15px 15px;
+      border-left: 1px solid $gray;
+
+      .booking-action__booked-resources {
+        margin-bottom: 15px;
+      }
+
+      .booking-action__booking-configurations {
+        margin-bottom: 15px;
+      }
+
+      .booking-action__booking-note {
+        font-size: 14px;
+        margin-bottom: 15px;
+
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+
+      .booking-action__booking-note-textarea {
+        position: relative;
+        .action {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          font-size: 28px;
+          line-height: 1;
+          border-radius: 50%;
+          cursor: pointer;
+          position: absolute;
+          bottom: 15px;
+          right: 10px;
+          background: rgba(255, 255, 255, 0.5);
+
+          &.action--voice {
+            font-size: 22px;
+          }
+        }
+      }
+
+      .booking-action__error-box {
+        margin-top: -10px;
+        margin-bottom: 30px;
+
+        ::v-deep {
+          small {
+            display: block;
+            margin-top: 5px;
+
+            span {
+              color: red;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .booking-action__form-submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .booking-action__button {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  &.booking-action__form--mobile {
+    height: 100%;
+
+    ::v-deep > .a-wizard {
+      height: 100%;
+    }
+
+    .booking-action__container {
+      .booking-action__form-search {
+        padding: 0px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .booking-action__footer {
+      padding: 10px 0px;
+
+      .booking-action__footer-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .booking-action__footer-button {
+          flex: 1;
+          margin: 0px 10px;
+          padding: 8px !important;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

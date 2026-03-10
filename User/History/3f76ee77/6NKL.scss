@@ -1,0 +1,128 @@
+.modal-aha-ai {
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .modal-aha-ai-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    .modal-aha-ai-top__title {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      gap: 10px;
+      b {
+        padding-top: 2px;
+      }
+      .question-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+    .setting-icon {
+      margin-left: auto;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  .modal-aha-ai-body {
+    .modal-aha-ai-body__textarea {
+      border: 1px solid $gray;
+      border-radius: 0.25rem;
+
+      &:focus-within {
+        border: 1px solid #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      textarea {
+        font-size: 14px;
+        color: $black;
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+      textarea:focus {
+        box-shadow: none;
+        border: none;
+      }
+      textarea:disabled {
+        background-color: $white;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 32px;
+        margin: 0 10px 10px;
+      }
+    }
+
+    .modal-aha-ai-body__result {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: $gray-lighten;
+
+      > p {
+        margin-bottom: 5px;
+      }
+
+      .result-item {
+        margin-bottom: 12px;
+      }
+
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+
+        li {
+          background-color: $white;
+          border-radius: 10px;
+          padding: 10px;
+          flex: 0 0 calc((100% - 30px) / 4);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          cursor: pointer;
+          &:hover {
+            p.item-name {
+              color: $blue;
+            }
+          }
+          p.item-name {
+            margin-bottom: 8px;
+            word-break: break-all;
+          }
+        }
+        li.active {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .validate-errors-wrapper {
+    margin-top: 10px;
+  }
+}
+
+.modal-aha-ai--mobile {
+  .modal-aha-ai-body {
+    .modal-aha-ai-body__result {
+      .items {
+        li {
+          flex: 0 0 calc((100% - 10px) / 2);
+        }
+      }
+    }
+  }
+}

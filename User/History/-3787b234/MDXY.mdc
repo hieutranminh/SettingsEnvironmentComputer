@@ -1,0 +1,356 @@
+# TypeScript Strict Patterns
+
+This project enforces strict TypeScript patterns for type safety and maintainability.
+
+## Type Definitions:
+
+```typescript
+// types/index.ts - Central type definitions
+export interface User {
+  id: number
+  name: string
+  email: string
+  role: UserRole
+  status: UserStatus
+  createdAt: string
+  updatedAt: string
+}
+
+export type UserRole = 'admin' | 'user' | 'moderator'
+export type UserStatus = 'active' | 'inactive' | 'pending'
+
+export interface CreateUserRequest {
+  name: string
+  email: string
+  role: UserRole
+  password: string
+}
+
+export interface UpdateUserRequest {
+  name?: string
+  email?: string
+  role?: UserRole
+  status?: UserStatus
+}
+
+export interface UserFilters {
+  search: string
+  status: UserStatus | 'all'
+  role: UserRole | 'all'
+}
+
+// API Response types
+export interface ApiResponse<T = unknown> {
+  data: T
+  success: boolean
+  message?: string
+}
+
+export interface PaginatedResponse<T> {
+  data: T[]
+  pagination: {
+    page: number
+    limit: number
+    total: number
+    totalPages: number
+  }
+}
+
+// Route types
+export interface RouteParams {
+  id: string
+}
+
+export interface RouteQuery {
+  tab?: string
+  filter?: string
+  page?: string
+}
+
+// Component prop types
+export interface ComponentProps {
+  title: string
+  loading?: boolean
+  disabled?: boolean
+  size?: 'small' | 'medium' | 'large'
+}
+
+// Event types
+export interface FormSubmitEvent {
+  preventDefault: () => void
+  target: HTMLFormElement
+}
+
+export interface InputChangeEvent {
+  target: HTMLInputElement
+}
+```
+
+## Function Type Definitions:
+
+```typescript
+// Always define return types for functions
+const fetchUser = async (id: number): Promise<User> => {
+  const response = await api.get<User>(`/users/${id}`)
+  return response.data
+}
+
+// Use generic constraints for reusable functions
+const createApiService = <T extends { id: number }>(endpoint: string) => {
+  return {
+    getAll: async (): Promise<T[]> => {
+      const response = await api.get<T[]>(endpoint)
+      return response.data
+    },
+    getById: async (id: number): Promise<T> => {
+      const response = await api.get<T>(`${endpoint}/${id}`)
+      return response.data
+    },
+    create: async (data: Omit<T, 'id'>): Promise<T> => {
+      const response = await api.post<T>(endpoint, data)
+      return response.data
+    },
+    update: async (id: number, data: Partial<T>): Promise<T> => {
+      const response = await api.put<T>(`${endpoint}/${id}`, data)
+      return response.data
+    },
+    delete: async (id: number): Promise<void> => {
+      await api.delete(`${endpoint}/${id}`)
+    },
+  }
+}
+
+// Use discriminated unions for complex state
+type LoadingState =
+  | { status: 'idle' }
+  | { status: 'loading' }
+  | { status: 'success'; data: User }
+  | { status: 'error'; error: string }
+
+// Use mapped types for dynamic properties
+type ApiEndpoints = {
+  users: '/users'
+  posts: '/posts'
+  comments: '/comments'
+}
+
+type ApiMethods<T extends keyof ApiEndpoints> = {
+  get: () => Promise<ApiResponse<T>>
+  post: (data: unknown) => Promise<ApiResponse<T>>
+  put: (id: number, data: unknown) => Promise<ApiResponse<T>>
+  delete: (id: number) => Promise<void>
+}
+```
+
+## Component Type Definitions:
+
+```vue
+<script setup lang="ts">
+// Define prop interfaces
+interface Props {
+  title: string
+  items: User[]
+  loading?: boolean
+  onSelect?: (user: User) => void
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  loading: false,
+})
+
+// Define emit interfaces
+interface Emits {
+  (e: 'select', user: User): void
+  (e: 'delete', id: number): void
+  (e: 'update', user: User): void
+}
+
+const emit = defineEmits<Emits>()
+
+// Define reactive state with types
+const selectedUser = ref<User | null>(null)
+const filteredItems = ref<User[]>([])
+
+// Define computed with return types
+const userCount = computed((): number => props.items.length)
+
+const activeUsers = computed((): User[] => {
+  return props.items.filter((user) => user.status === 'active')
+})
+
+// Define methods with return types
+const handleSelect = (user: User): void => {
+  selectedUser.value = user
+  emit('select', user)
+}
+
+const handleDelete = async (id: number): Promise<void> => {
+  try {
+    await userService.deleteUser(id)
+    emit('delete', id)
+  } catch (error) {
+    console.error('Failed to delete user:', error)
+  }
+}
+</script>
+```
+
+## Store Type Definitions:
+
+```typescript
+// stores/user.ts
+import { defineStore } from 'pinia'
+import type { User, CreateUserRequest, UpdateUserRequest, UserFilters } from '@/types'
+
+interface UserState {
+  users: User[]
+  loading: boolean
+  error: string | null
+  filters: UserFilters
+}
+
+interface UserActions {
+  fetchUsers: () => Promise<void>
+  createUser: (userData: CreateUserRequest) => Promise<User>
+  updateUser: (id: number, userData: UpdateUserRequest) => Promise<User>
+  deleteUser: (id: number) => Promise<void>
+  updateFilters: (filters: Partial<UserFilters>) => void
+  clearError: () => void
+}
+
+export const useUserStore = defineStore('user', (): UserState & UserActions => {
+  // Implementation...
+})
+```
+
+## Error Handling Types:
+
+```typescript
+// Custom error classes
+class ApiError extends Error {
+  constructor(
+    message: string,
+    public statusCode: number,
+    public code?: string,
+  ) {
+    super(message)
+    this.name = 'ApiError'
+  }
+}
+
+class ValidationError extends Error {
+  constructor(
+    message: string,
+    public field: string,
+    public value: unknown,
+  ) {
+    super(message)
+    this.name = 'ValidationError'
+  }
+}
+
+// Error handling functions
+const handleApiError = (error: unknown): string => {
+  if (error instanceof ApiError) {
+    return `API Error (${error.statusCode}): ${error.message}`
+  }
+
+  if (error instanceof ValidationError) {
+    return `Validation Error: ${error.message}`
+  }
+
+  if (error instanceof Error) {
+    return error.message
+  }
+
+  return 'An unexpected error occurred'
+}
+
+// Type guards
+const isApiError = (error: unknown): error is ApiError => {
+  return error instanceof ApiError
+}
+
+const isValidationError = (error: unknown): error is ValidationError => {
+  return error instanceof ValidationError
+}
+```
+
+## Utility Types:
+
+```typescript
+// Common utility types
+type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
+}
+
+type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>
+
+type OptionalFields<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
+
+type EventHandler<T = Event> = (event: T) => void
+
+type AsyncFunction<TArgs extends unknown[], TReturn> = (...args: TArgs) => Promise<TReturn>
+
+// Component prop utilities
+type ComponentProps<T> = {
+  [K in keyof T]: T[K] extends (infer U)[] ? U[] : T[K]
+}
+
+type EmitEvents<T> = {
+  [K in keyof T]: T[K] extends (...args: infer A) => unknown ? A : never
+}
+```
+
+## TypeScript Rules:
+
+1. **Strict Mode**: Always use strict TypeScript configuration
+2. **No Any**: Avoid `any` type, use `unknown` or proper types
+3. **Return Types**: Always define return types for functions
+4. **Interface over Type**: Use interfaces for object shapes
+5. **Generic Constraints**: Use proper generic constraints
+6. **Type Guards**: Use type guards for runtime type checking
+7. **Discriminated Unions**: Use discriminated unions for complex state
+8. **Mapped Types**: Use mapped types for dynamic properties
+9. **Utility Types**: Leverage built-in utility types
+10. **Error Types**: Define specific error types for better error handling
+
+## Type Checking Patterns:
+
+```typescript
+// Runtime type checking
+const isValidUser = (obj: unknown): obj is User => {
+  return (
+    typeof obj === 'object' &&
+    obj !== null &&
+    'id' in obj &&
+    'name' in obj &&
+    'email' in obj &&
+    typeof (obj as User).id === 'number' &&
+    typeof (obj as User).name === 'string' &&
+    typeof (obj as User).email === 'string'
+  )
+}
+
+// Type assertion with validation
+const assertUser = (obj: unknown): User => {
+  if (!isValidUser(obj)) {
+    throw new ValidationError('Invalid user object', 'user', obj)
+  }
+  return obj
+}
+
+// Conditional types
+type ApiResponseType<T> = T extends User ? User : T extends User[] ? User[] : unknown
+
+// Template literal types
+type ApiEndpoint<T extends string> = `/api/${T}`
+type UserEndpoint = ApiEndpoint<'users'>
+type PostEndpoint = ApiEndpoint<'posts'>
+```
+
+description:
+globs:
+alwaysApply: false
+
+---

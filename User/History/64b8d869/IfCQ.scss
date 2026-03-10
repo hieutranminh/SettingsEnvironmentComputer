@@ -1,0 +1,152 @@
+.sales-prepaid-card-wrapper {
+  &__view-table {
+    table thead th {
+      white-space: nowrap;
+    }
+    tr:not(.inactive) {
+      .prepaid-card-name,
+      .balance {
+        font-weight: bold;
+      }
+    }
+  }
+
+  table {
+    thead {
+      tr {
+        th {
+          &.mobile {
+            display: none;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &.mobile {
+            display: none;
+          }
+
+          .show-more-text {
+            cursor: pointer;
+          }
+
+          .shop-and-family-info {
+            &__detail {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .show-expired-pc {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+    .custom-checkbox {
+      label.custom-control-label {
+        &::before,
+        &::after {
+          top: 3px;
+
+          @include max-responsive(small) {
+            top: 2px;
+          }
+        }
+      }
+    }
+
+    .right {
+      margin-left: 10px;
+    }
+    .move-balance {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+  .show-expired-mobile {
+    display: none;
+  }
+}
+
+// ****responsive------------------------
+@media screen and (max-width: 1199.98px) {
+}
+@media screen and (max-width: 991.98px) {
+}
+@media screen and (max-width: 767.98px) {
+  .sales-prepaid-card-wrapper .sales-prepaid-card-wrapper__view-table-wrapper {
+    .vgt-responsive {
+      overflow-x: hidden;
+    }
+    .vgt-wrap.empty {
+      table {
+        tbody {
+          tr {
+            td {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    table {
+      thead {
+        tr {
+          th {
+            display: none;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            display: none;
+            &.mobile {
+              display: block;
+              text-align: left;
+              height: auto;
+              position: relative;
+              .show-more-text {
+                position: absolute;
+                right: 20px;
+                top: 20%;
+              }
+              .card-name {
+                font-weight: bold;
+                font-size: 15px;
+              }
+              .expand {
+                transform: rotate(-90deg);
+              }
+              .group-button {
+                .btn {
+                  display: inline-block;
+                  margin: 0;
+
+                  &:first-child {
+                    margin-right: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .show-expired-mobile {
+      display: inline-block;
+    }
+
+    #dropdown-right {
+      height: 37px;
+      width: 37px;
+    }
+  }
+}

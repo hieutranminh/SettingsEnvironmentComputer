@@ -1,0 +1,76 @@
+---
+description: Vue composables
+globs: Application/VueJS/src/services/**/*.ts
+alwaysApply: false
+---
+
+# API Endpoint Organization Rules
+
+## Services Folder Structure
+
+The `src/services/` directory should be organized based on API endpoint patterns. When creating API service files, automatically categorize them according to the following rules:
+
+### Endpoint Pattern Analysis
+
+For any API endpoint, extract the following components:
+
+- **API Type**: `aggr`, `read`, or `cmd` (from the second path segment)
+- **Domain**: The main entity name (e.g., `UserAccount` from the third path segment)
+- **Subdomain**: Optional sub-entity (e.g., `Salon` from the fourth path segment)
+
+### Folder and File Naming Convention
+
+1. **Folder Structure**: Create a kebab-case folder based on the domain
+
+   - Example: `UserAccount` → `user-account/`
+   - Example: `ProductManagement` → `product-management/`
+
+2. **File Naming**: Use the pattern `{domain}.{api-type}.ts`
+   - Example: `user-account.aggr.ts`
+   - Example: `user-account.read.ts`
+   - Example: `user-account.cmd.ts`
+
+### Examples
+
+| Endpoint                                           | Folder                         | File Name                    |
+| -------------------------------------------------- | ------------------------------ | ---------------------------- |
+| `/api/aggr/v1/UserAccount/Salon/GetList`           | `services/user-account/`       | `user-account.aggr.ts`       |
+| `/api/read/v1/UserAccount/Salon/GetList`           | `services/user-account/`       | `user-account.read.ts`       |
+| `/api/cmd/v1/UserAccount/Salon/GetList`            | `services/user-account/`       | `user-account.cmd.ts`        |
+| `/api/aggr/v1/ProductManagement/Inventory/GetList` | `services/product-management/` | `product-management.aggr.ts` |
+| `/api/read/v1/OrderManagement/Orders/GetById`      | `services/order-management/`   | `order-management.read.ts`   |
+
+### Implementation Guidelines
+
+When creating API service files:
+
+1. **Extract the domain** from the third path segment of the endpoint
+2. **Convert to kebab-case** for folder naming
+3. **Extract the API type** from the second path segment (`aggr`, `read`, `cmd`)
+4. **Create the folder** if it doesn't exist: `src/services/{domain-kebab-case}/`
+5. **Name the file** using the pattern: `{domain-kebab-case}.{api-type}.ts`
+
+### File Structure Example
+
+```
+src/services/
+├── user-account/
+│   ├── user-account.aggr.ts
+│   ├── user-account.read.ts
+│   └── user-account.cmd.ts
+├── product-management/
+│   ├── product-management.aggr.ts
+│   └── product-management.read.ts
+└── order-management/
+    ├── order-management.read.ts
+    └── order-management.cmd.ts
+```
+
+### Code Organization Within Files
+
+Each service file should:
+
+- Export functions named after the endpoint action (e.g., `getUserAccountList`, `createUserAccount`)
+- Use consistent naming patterns for similar operations across different API types
+- Include proper TypeScript types for request/response data
+- Follow the existing API service patterns in the codebase

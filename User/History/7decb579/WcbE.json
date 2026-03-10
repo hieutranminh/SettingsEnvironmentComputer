@@ -1,0 +1,43 @@
+{
+  "plugins": ["stylelint-declaration-strict-value"],
+  "overrides": [{ "files": ["**/*.vue"], "customSyntax": "postcss-html" }],
+  "ignoreFiles": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/*.min.css",
+    "coverage/**"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "declaration-empty-line-before": null,
+    "declaration-property-value-no-unknown": null,
+    "nesting-selector-no-missing-scoping-root": null,
+
+    "color-no-hex": true,
+    "color-named": "never",
+    "function-disallowed-list": ["/^(rgb|rgba|hsl|hsla|lch|oklch|hwb)$/i"],
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "/color$/",
+        "background",
+        "background-color",
+        "border-color",
+        "outline-color",
+        "text-decoration-color",
+        "fill",
+        "stroke"
+      ],
+      {
+        "ignoreValues": [
+          "currentColor",
+          "transparent",
+          "inherit",
+          "initial",
+          "unset"
+        ]
+      }
+    ]
+  },
+  "reportInvalidScopeDisables": false,
+  "reportNeedlessDisables": false
+}

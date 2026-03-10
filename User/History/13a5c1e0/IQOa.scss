@@ -1,0 +1,72 @@
+.calendar-booking-date {
+  &.vc-container {
+    width: 100%;
+    .vc-day {
+      .vc-day-content {
+        &:focus {
+          font-weight: 500;
+        }
+        &.is-disabled {
+          cursor: not-allowed;
+          color: $gray-1;
+        }
+      }
+
+      &.is-not-in-month {
+        * {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  // Customize popover content
+  .vc-popover-content-wrapper {
+    .vc-popover-content {
+      .specific-working-day-popover {
+        text-align: center;
+      }
+    }
+    .vc-nav-popover-container {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e0;
+      color: #2d3748;
+      .vc-nav-header {
+        span:hover {
+          background-color: #edf2f7;
+        }
+        span.vc-nav-title {
+          color: $black-v-calendar;
+        }
+      }
+
+      .vc-nav-items {
+        .vc-nav-item {
+          color: #2d3748;
+        }
+        .vc-nav-item.is-current {
+          border: none;
+        }
+        .vc-nav-item:focus {
+          border: none;
+          line-height: unset;
+        }
+        .vc-nav-item.is-active,
+        .vc-nav-item.is-active:hover {
+          color: #ffffff;
+          background-color: #4299e1;
+        }
+        .vc-nav-item:hover {
+          color: #2d3748;
+          background-color: #edf2f7;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+.calendar-booking-date--mobile {
+  &.vc-container {
+    width: auto;
+  }
+}

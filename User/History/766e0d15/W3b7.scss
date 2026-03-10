@@ -1,0 +1,103 @@
+.report-insights {
+  .report-insights-header {
+    display: flex;
+    align-items: center;
+    .report-insights-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      h3 {
+        font-weight: 600;
+        line-height: 1;
+      }
+    }
+    .report-insights-actions {
+      margin-left: auto;
+    }
+  }
+  .report-insights-body {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid $gray;
+
+    .report-insights-content {
+      // Reset and isolate markdown content from base CSS
+      p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+        all: revert;
+        word-break: break-word;
+      }
+
+      p {
+        margin: 0 0 10px 0;
+        line-height: 1.5;
+        white-space: break-spaces;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      // List styles
+      ul, ol {
+        margin: 0 0 10px 0;
+        padding-left: 20px;
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      li {
+        margin-bottom: 5px;
+        line-height: 1.5;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      // Heading styles
+      h1, h2, h3, h4, h5, h6 {
+        margin: 15px 0 10px 0;
+        line-height: 1.3;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      h1 { font-size: 1.5em; font-weight: 700; }
+      h2 { font-size: 1.3em; font-weight: 700; }
+      h3 { font-size: 1.15em; font-weight: 600; }
+      h4 { font-size: 1em; font-weight: 600; }
+      h5 { font-size: 0.9em; font-weight: 600; }
+      h6 { font-size: 0.85em; font-weight: 600; }
+
+      // Link styles
+      a {
+        color: $blue;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .report-insights-body-loading {
+    padding: 10px 0;
+  }
+}

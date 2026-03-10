@@ -1,0 +1,139 @@
+@use "sass:color";
+@use "sass:map";
+@use "sass:math";
+@use "variables" as *;
+
+// Color functions
+@function lighten-color($color, $percentage) {
+  @return color.scale($color, $lightness: $percentage);
+}
+
+@function darken-color($color, $percentage) {
+  @return color.scale($color, $lightness: -$percentage);
+}
+
+@function rgba-color($color, $alpha) {
+  @return color.change($color, $alpha: $alpha);
+}
+
+// Spacing functions
+@function spacing($multiplier: 1) {
+  @return $spacing-md * $multiplier;
+}
+
+@function rem($pixels) {
+  @return #{$pixels / 16}rem;
+}
+
+@function em($pixels, $context: 16) {
+  @return #{$pixels / $context}em;
+}
+
+// Math functions
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function calculate-percentage($value, $total) {
+  @return percentage($value / $total);
+}
+
+// Z-index function
+@function z($layer) {
+  $z-layers: (
+    'dropdown': $z-dropdown,
+    'sticky': $z-sticky,
+    'fixed': $z-fixed,
+    'modal-backdrop': $z-modal-backdrop,
+    'modal': $z-modal,
+    'popover': $z-popover,
+    'tooltip': $z-tooltip
+  );
+  
+  @return map.get($z-layers, $layer);
+}
+
+// Color palette functions
+@function get-color($color-name) {
+  $colors: (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'accent': $accent-color,
+    'danger': $danger-color,
+    'warning': $warning-color,
+    'success': $success-color,
+    'white': $white,
+    'black': $black
+  );
+  
+  @return map.get($colors, $color-name);
+}
+
+// Breakpoint functions
+@function breakpoint($name) {
+  $breakpoints: (
+    'sm': $breakpoint-sm,
+    'md': $breakpoint-md,
+    'lg': $breakpoint-lg,
+    'xl': $breakpoint-xl,
+    '2xl': $breakpoint-2xl
+  );
+  
+  @return map.get($breakpoints, $name);
+}
+
+// Font size functions
+@function font-size($size) {
+  $font-sizes: (
+    'xs': $font-size-xs,
+    'sm': $font-size-sm,
+    'base': $font-size-base,
+    'lg': $font-size-lg,
+    'xl': $font-size-xl,
+    '2xl': $font-size-2xl,
+    '3xl': $font-size-3xl,
+    '4xl': $font-size-4xl
+  );
+  
+  @return map.get($font-sizes, $size);
+}
+
+// Border radius functions
+@function border-radius($size) {
+  $border-radiuses: (
+    'sm': $border-radius-sm,
+    'md': $border-radius-md,
+    'lg': $border-radius-lg,
+    'xl': $border-radius-xl,
+    '2xl': $border-radius-2xl,
+    'full': $border-radius-full
+  );
+  
+  @return map.get($border-radiuses, $size);
+}
+
+// Shadow functions
+@function shadow($size) {
+  $shadows: (
+    'sm': $shadow-sm,
+    'md': $shadow-md,
+    'lg': $shadow-lg,
+    'xl': $shadow-xl
+  );
+  
+  @return map.get($shadows, $size);
+}
+
+// Transition functions
+@function transition($speed: 'normal') {
+  $transitions: (
+    'fast': $transition-fast,
+    'normal': $transition-normal,
+    'slow': $transition-slow
+  );
+  
+  @return map.get($transitions, $speed);
+} 

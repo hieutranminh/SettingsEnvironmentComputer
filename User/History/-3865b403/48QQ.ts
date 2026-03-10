@@ -1,0 +1,4 @@
+export { default as AppLoading } from './AppLoading.vue'
+export { default as AppEmpty } from './AppEmpty.vue'
+export { default as AppError } from './AppError.vue'
+export { default as LanguageSwitcher } from './LanguageSwitcher.vue'
