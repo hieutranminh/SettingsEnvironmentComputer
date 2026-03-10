@@ -1,4 +1,0 @@
-VITE_ENVIRONMENT=staging
-VITE_DEBUG=false
-VITE_SOURCE_MAP=true
-VITE_API_BASE_URL=https://api-staging.hieu.com 

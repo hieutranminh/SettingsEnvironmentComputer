@@ -1,4 +1,0 @@
-VITE_ENVIRONMENT=development
-VITE_DEBUG=true
-VITE_SOURCE_MAP=true
-VITE_API_BASE_URL=https://api-dev.hieu.com 

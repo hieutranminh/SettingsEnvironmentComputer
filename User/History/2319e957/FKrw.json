@@ -1,8 +1,0 @@
-{
-  "window.commandCenter": 1,
-  "cursor.cpp.disabledLanguages": ["markdown", "plaintext"],
-  "editor.formatOnSave": true,
-  "eslint.codeActionsOnSave.rules": null,
-  "workbench.colorTheme": "Dracula Theme",
-  "git.autofetch": true
-}
